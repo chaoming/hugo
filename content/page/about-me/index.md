@@ -1,6 +1,5 @@
 ---
 title: About Me
-description: Hugo, the world's fastest framework for building websites
 aliases:
   - about-me
 menu:
