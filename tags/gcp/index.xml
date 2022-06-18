@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gcp on Chaoming's Blog</title><link>https://chaoming.github.io/hugo/tags/gcp/</link><description>Recent content in gcp on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.github.io/hugo/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.github.io/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.github.io/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.github.io/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gcp on Chaoming's Blog</title><link>https://chaoming.li/tags/gcp/</link><description>Recent content in gcp on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
 &lt;h2 id="why-you-should-do-this">Why You Should Do This:&lt;/h2>
 &lt;p>Good reasons to automate the deployment process are:&lt;/p>
 &lt;ul>
@@ -20,10 +20,10 @@
 &lt;/ul>
 &lt;p>This workflow is a bit oversimplified. But the point is: Only someone with permission can deploy the application to the production by committing to the master branch. This can be achieved with &lt;a class="link" href="https://help.github.com/en/articles/enabling-branch-restrictions" target="_blank" rel="noopener"
 >branch restrictions&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png"
 width="837"
 height="461"
-srcset="https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Deployment Workflow Diagram"
 class="gallery-image"
@@ -64,10 +64,10 @@ data-flex-basis="435px"
 &lt;p>Once you have put the environment variables into the staging app.yaml file, upload it to a Google Cloud Storage bucket and make sure it’s not available to the public (by default it isn’t). Do the same for the production app.yaml but use a different bucket.&lt;/p>
 &lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging&lt;/h2>
 &lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q.png"
 width="501"
 height="597"
-srcset="https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Cloud Build Screenshot"
 class="gallery-image"
@@ -105,7 +105,7 @@ data-flex-basis="201px"
 &lt;p>Because only the system administrator is able to commit to production, as a developer, you should create a Pull Request in the GitHub repository to merge your changes from the staging branch into the master branch. Once the Pull Request is approved and merged, it will trigger the Cloud Build deployment process in the production project.&lt;/p>
 &lt;p>Conclusion:&lt;/p>
 &lt;p>This approach not only streamlines the deployment process, but it also makes it more secure and reliable.&lt;/p>
-&lt;p>If you have any feedback or questions, please feel free to comment below.&lt;/p></description></item><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
+&lt;p>If you have any feedback or questions, please feel free to comment below.&lt;/p></description></item><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
 &lt;h2 id="generating-a-certificate-signing-request">Generating a certificate signing request&lt;/h2>
 &lt;p>To get a certificate, firstly, you need to generate a certificate signing request to your SSL certificate issuer so that they can provide you with a valid certificate. Here is the command using OpenSSL to do it.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -132,10 +132,10 @@ data-flex-basis="201px"
 &lt;/div>
 &lt;/div>&lt;h2 id="upload-certificate-and-pem-key-to-app-engine">Upload certificate and PEM key to App Engine&lt;/h2>
 &lt;p>In the App Engine settings interface, click on the SSL certificates tab and you can upload a certificate.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
 width="526"
 height="97"
-srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="App Engine Settings Screenshot"
 class="gallery-image"
@@ -143,10 +143,10 @@ data-flex-grow="542"
 data-flex-basis="1301px"
 >&lt;/p>
 &lt;p>That will bring up this interface where you can copy and paste your certificate and private key.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
 width="511"
 height="482"
-srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to App Engine Screenshot"
 class="gallery-image"
@@ -158,10 +158,10 @@ data-flex-basis="254px"
 &lt;p>This change will take about 10 minutes or more to become effective. You can verify that by checking your domain’s SSL certificate with any browser. It’s better to check it with all major browsers to make sure they like your certificate.&lt;/p>
 &lt;h2 id="upload-certificate-to-the-gcp-load-balancer">Upload certificate to the GCP load balancer&lt;/h2>
 &lt;p>To upload a certificate to the GCP load balancer, you need to go to Network services then edit your load balancer. Then click on Frontend configuration and you will be able to edit the port 443 configuration settings where you can manage your SSL certificates.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
 width="647"
 height="483"
-srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Load Balancer Screenshot"
 class="gallery-image"
@@ -169,10 +169,10 @@ data-flex-grow="133"
 data-flex-basis="321px"
 >&lt;/p>
 &lt;p>After clicking on “Create a new certificate” in the Certificate dropdown list, you will see the interface to copy and paste in your certificate, certificate chain (root certificate), and the private key.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
 width="479"
 height="610"
-srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to Load Balancer Screenshot"
 class="gallery-image"
@@ -185,7 +185,7 @@ data-flex-basis="188px"
 &lt;h2 id="conclusion">Conclusion:&lt;/h2>
 &lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
 &lt;p>Again, I think GCP should have a centralised place to manage all the certificates so you can just pick them up in the different products. That will save some effort.&lt;/p>
-&lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item><item><title>How to Use Docker for Go App Engine Development and Deploy to Standard Environment</title><link>https://chaoming.github.io/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</link><pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate><guid>https://chaoming.github.io/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</guid><description>&lt;img src="https://chaoming.github.io/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/43219741-fdfef302-8ffc-11e8-96f4-4a2ab2ce136b_orig-500x250.png" alt="Featured image of post How to Use Docker for Go App Engine Development and Deploy to Standard Environment" />&lt;p>App Engine is great but if you are using Docker, you can only use Flexible Environment which is not what I want as I would love to continue to use Standard Environment. Here is &lt;a class="link" href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank" rel="noopener"
+&lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item><item><title>How to Use Docker for Go App Engine Development and Deploy to Standard Environment</title><link>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</link><pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/43219741-fdfef302-8ffc-11e8-96f4-4a2ab2ce136b_orig-500x250.png" alt="Featured image of post How to Use Docker for Go App Engine Development and Deploy to Standard Environment" />&lt;p>App Engine is great but if you are using Docker, you can only use Flexible Environment which is not what I want as I would love to continue to use Standard Environment. Here is &lt;a class="link" href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank" rel="noopener"
 >a comparison of the two environments&lt;/a>.&lt;/p>
 &lt;p>My goal is to use Docker for development only. When the app is deployed, it will still be deployed to App Engine Standard Environment as usual. After some researches and trial, I found a way to do so.&lt;/p>
 &lt;h2 id="create-app-engine-development-docker">Create App Engine Development Docker&lt;/h2>
@@ -288,10 +288,10 @@ data-flex-basis="188px"
 &lt;p>I don’t want to deploy Docker containers to App Engine because that allows using Flexible Environment only. I will need to find a different way to deploy to Standard Environment. Google Cloud Build is perfect for the deployment task. It can deploy code from Github repository triggered by Git push.&lt;/p>
 &lt;p>The solution is fairly straightforward. First, push the Go source code to Github. Git push will trigger Cloud Build to run cloudbuild.yaml and go through the steps to get the Go packages and to run the gcloud deploy command.&lt;/p>
 &lt;p>To do this, make sure your App Engine admin API is enabled and the App Engine is created in your project. You will also need to grant App Engine deployer and server admin permissions to the cloud build service account as below screenshot.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig.png"
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig.png"
 width="530"
 height="300"
-srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Permissions for Cloud Build to Deploy to App Engine"
 class="gallery-image"
@@ -357,7 +357,7 @@ data-flex-basis="424px"
 &lt;h2 id="conclusion">Conclusion&lt;/h2>
 &lt;p>This approach is great when you need to replicate the development environment without much overhead. Including the Dockerfile in the Git repository will allow new developers to set up a development environment very fast as long as Git and Docker are installed.&lt;/p>
 &lt;p>Deployment is fully automatic when the code is pushed to the Github repository. I am not going to talk about how to manage and review code before deployment but you will need to have quality control on the code being pushed into the Github repository anyway.&lt;/p>
-&lt;p>Let me know what you think or if you have any questions.&lt;/p></description></item><item><title>Joining Partitioned Tables to Create Views in BigQuery</title><link>https://chaoming.github.io/hugo/blog/joining-partitioned-tables-to-create-views-in-bigquery/</link><pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate><guid>https://chaoming.github.io/hugo/blog/joining-partitioned-tables-to-create-views-in-bigquery/</guid><description>&lt;img src="https://chaoming.github.io/hugo/blog/joining-partitioned-tables-to-create-views-in-bigquery/bigquery-500x250.png" alt="Featured image of post Joining Partitioned Tables to Create Views in BigQuery" />&lt;p>BigQuery date partitioned tables can limit the data scan by partitions to help keep the query cost low and improve query performance. However, Google’s documents do not give much clue about how to use partitioned tables to create views that support partition queries. I did some research and found the way to do it, even with views that are created from joining partitioned tables.&lt;/p>
+&lt;p>Let me know what you think or if you have any questions.&lt;/p></description></item><item><title>Joining Partitioned Tables to Create Views in BigQuery</title><link>https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/</link><pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/</guid><description>&lt;img src="https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/bigquery-500x250.png" alt="Featured image of post Joining Partitioned Tables to Create Views in BigQuery" />&lt;p>BigQuery date partitioned tables can limit the data scan by partitions to help keep the query cost low and improve query performance. However, Google’s documents do not give much clue about how to use partitioned tables to create views that support partition queries. I did some research and found the way to do it, even with views that are created from joining partitioned tables.&lt;/p>
 &lt;p>To expose the partitioning pseudo-column, create a query similar to this one:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
