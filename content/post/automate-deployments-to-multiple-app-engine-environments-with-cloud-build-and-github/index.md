@@ -21,7 +21,7 @@ image = "1_UzYiagjfQwOZTlIwmCqKOQ.png"
 
 If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.
 
-## Why You Should Do This:
+## Why You Should Do This
 
 Good reasons to automate the deployment process are:
 
@@ -30,7 +30,7 @@ Good reasons to automate the deployment process are:
 - Restrict permission to deploy to certain environments (e.g. production) with a process
 - Streamline the deployment process and gain the benefits of automation (e.g. testing)
 
-## Assumptions:
+## Assumptions
 
 I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.
 

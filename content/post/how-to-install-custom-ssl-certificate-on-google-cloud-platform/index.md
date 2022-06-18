@@ -77,7 +77,7 @@ Similar to App Engine, the new certificate will only take effect after about 10 
 
 In my experience missing the certificate chain can cause issues with some browsers but Chrome might not mind it.
 
-## Conclusion:
+## Conclusion
 
 Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.
 
