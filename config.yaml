@@ -5,7 +5,7 @@ paginate: 5
 title: Chaoming's Blog
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: chaomings-blog
 
 # GA Tracking ID
 googleAnalytics: UA-37357871-1
@@ -59,7 +59,7 @@ params:
 
         disqusjs:
             shortname: chaomings-blog
-            apiUrl:
+            apiUrl: https://disqus.com/api/
             apiKey: cqHBPalxwbSqwr7EYocYpe9AyztvfvSNRBBzLgIPlCBuagxwJvxWDl7GChdlGXWE
             admin: "Chaoming Li"
             adminLabel:
