@@ -1,4 +1,4 @@
-baseurl: https://chaoming.github.io/hugo/
+baseurl: https://chaoming.li
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
