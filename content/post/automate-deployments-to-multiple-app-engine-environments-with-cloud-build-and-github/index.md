@@ -48,7 +48,7 @@ After the application is tested in the staging environment:
 
 This workflow is a bit oversimplified. But the point is: Only someone with permission can deploy the application to the production by committing to the master branch. This can be achieved with [branch restrictions](https://help.github.com/en/articles/enabling-branch-restrictions).
 
-![1_UzYiagjfQwOZTlIwmCqKOQ.png](1_UzYiagjfQwOZTlIwmCqKOQ.png)
+![Deployment Workflow Diagram](1_UzYiagjfQwOZTlIwmCqKOQ.png)
 
 ## Step 2: Move All Environment Related Configurations to app.yaml
 
@@ -83,7 +83,7 @@ Once you have put the environment variables into the staging app.yaml file, uplo
 
 In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml
 
-![1_GBG2F-EdARSeVptNoYNo2Q.png](1_GBG2F-EdARSeVptNoYNo2Q.png)
+![Cloud Build Screenshot](1_GBG2F-EdARSeVptNoYNo2Q.png)
 
 And, you need a cloudbuild.yaml file in your Git repository to control the deployment process. Below is a simple cloudbuild.yaml file that does two things:
 
