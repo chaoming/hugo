@@ -12,4 +12,4 @@ comments: false
 
 Hi,
 
-Welcome to my site.
+Welcome to my site. This is my blog.
