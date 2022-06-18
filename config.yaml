@@ -59,7 +59,7 @@ params:
 
         disqusjs:
             shortname: chaomings-blog
-            apiUrl: https://disqus.com/api/
+            apiUrl:
             apiKey: cqHBPalxwbSqwr7EYocYpe9AyztvfvSNRBBzLgIPlCBuagxwJvxWDl7GChdlGXWE
             admin: "Chaoming Li"
             adminLabel:
