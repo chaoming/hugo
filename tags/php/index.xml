@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>php on Chaoming's Blog</title><link>https://chaoming.li/tags/php/</link><description>Recent content in php on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/php/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
+&lt;h2 id="why-you-should-do-this">Why You Should Do This:&lt;/h2>
+&lt;p>Good reasons to automate the deployment process are:&lt;/p>
+&lt;ul>
+&lt;li>Reduce the impact of human error on a deployment&lt;/li>
+&lt;li>Improve security by not including any credentials or sensitive configuration settings in the source code&lt;/li>
+&lt;li>Restrict permission to deploy to certain environments (e.g. production) with a process&lt;/li>
+&lt;li>Streamline the deployment process and gain the benefits of automation (e.g. testing)&lt;/li>
+&lt;/ul>
+&lt;h2 id="assumptions">Assumptions:&lt;/h2>
+&lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
+&lt;p>In this article, I’ll only assume that you have an App Engine application. I have used this process for Golang and PHP, but it will work for Python and other languages.&lt;/p>
+&lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions&lt;/h2>
+&lt;p>In your GitHub repository, you need to have some branches, at least a staging branch and a master branch. The workflow is that a developer can commit to the staging branch. It will automatically deploy the application to a staging App Engine environment.&lt;/p>
+&lt;p>After the application is tested in the staging environment:&lt;/p>
+&lt;ul>
+&lt;li>The developer will create a pull request&lt;/li>
+&lt;li>The administrator will merge it with the master branch&lt;/li>
+&lt;li>The automation will deploy the application to the production environment&lt;/li>
+&lt;/ul>
+&lt;p>This workflow is a bit oversimplified. But the point is: Only someone with permission can deploy the application to the production by committing to the master branch. This can be achieved with &lt;a class="link" href="https://help.github.com/en/articles/enabling-branch-restrictions" target="_blank" rel="noopener"
+>branch restrictions&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png"
+width="837"
+height="461"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Deployment Workflow Diagram"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="435px"
+>&lt;/p>
+&lt;h2 id="step-2-move-all-environment-related-configurations-to-appyaml">Step 2: Move All Environment Related Configurations to app.yaml&lt;/h2>
+&lt;p>It’s very common for an application to have environment variables for configuration and secrets such as database credentials, domains, GCP key files, etc. Some of these details are security-critical so they should never be included in the source code. If you have embedded them into part of the source code, it’s time to remove them and put them into the app.yaml file that is kept outside of the repository and only is used during deployment.&lt;/p>
+&lt;p>In your app.yaml file, you can have these variables as environment variables in the following syntax:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">env_variables&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">DOMAIN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;staging.mydomain.com&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">DEBUG_MODE&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">MYSQL_DSN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;blah blah&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>The App Engine platform will take these values from app.yaml and make them available to your application, which can read the environment variables to ensure your application has the correct settings.&lt;/p>
+&lt;p>Depending on which language your application is written in, there are different ways to read the environment variables. Here is the link to Python and other languages (click on the language links at the top of the content to switch to your preferred language): &lt;a class="link" href="https://cloud.google.com/appengine/docs/standard/python/config/appref" target="_blank" rel="noopener"
+>https://cloud.google.com/appengine/docs/standard/python/config/appref&lt;/a>&lt;/p>
+&lt;p>In PHP, use:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;VAR NAME&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>I don’t think $_ENV works.&lt;/p>
+&lt;p>If you need app.yaml for your local environment, just make sure the file is in .gitignore so it won’t be included in the repository.&lt;/p>
+&lt;p>Once you have put the environment variables into the staging app.yaml file, upload it to a Google Cloud Storage bucket and make sure it’s not available to the public (by default it isn’t). Do the same for the production app.yaml but use a different bucket.&lt;/p>
+&lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging&lt;/h2>
+&lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q.png"
+width="501"
+height="597"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Cloud Build Screenshot"
+class="gallery-image"
+data-flex-grow="83"
+data-flex-basis="201px"
+>&lt;/p>
+&lt;p>And, you need a cloudbuild.yaml file in your Git repository to control the deployment process. Below is a simple cloudbuild.yaml file that does two things:&lt;/p>
+&lt;ul>
+&lt;li>Copy the app.yaml file from the bucket&lt;/li>
+&lt;li>Deploy the application&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">gcr.io/cloud-builders/gsutil&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">args&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;cp&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;gs://$_BUCKET/app.yaml&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;html/app.yaml&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;gcr.io/cloud-builders/gcloud&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">args&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;app&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;deploy&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;html/&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>You can see that I use $_BUCKET in the cloudbuild.yaml file as the bucket name of the app.yaml file. This means when I configure the production Cloud Build trigger, the same cloudbuild.yaml will work without any modification.&lt;/p>
+&lt;p>Now, commit to your staging branch, and you will see Cloud Build is triggered and starts the deployment process automatically.&lt;/p>
+&lt;h2 id="step-4-grant-permissions-to-cloud-build">Step 4: Grant Permissions to Cloud Build&lt;/h2>
+&lt;p>The deployment is likely to fail because Cloud Build doesn’t have the permissions to access Cloud Storage, App Engine, etc.&lt;/p>
+&lt;p>Go to IAM web UI in your GCP project, and change the permission settings of the Cloud Build service account to grant it App Engine Admin and other relevant permissions for completing the deployment. Now, retry the deployment in Cloud Build, you should see the successfully deployed message in the logs.&lt;/p>
+&lt;h2 id="step-5-repeat-step-3-and-step-4-for-production">Step 5: Repeat Step 3 and Step 4 for Production&lt;/h2>
+&lt;p>Just repeat the above two steps in the production project. Make sure the production app.yaml is in the Cloud Storage bucket for production, and the Cloud Build trigger _BUCKET variable is pointing to the production bucket as well.&lt;/p>
+&lt;p>Because only the system administrator is able to commit to production, as a developer, you should create a Pull Request in the GitHub repository to merge your changes from the staging branch into the master branch. Once the Pull Request is approved and merged, it will trigger the Cloud Build deployment process in the production project.&lt;/p>
+&lt;p>Conclusion:&lt;/p>
+&lt;p>This approach not only streamlines the deployment process, but it also makes it more secure and reliable.&lt;/p>
+&lt;p>If you have any feedback or questions, please feel free to comment below.&lt;/p></description></item></channel></rss>

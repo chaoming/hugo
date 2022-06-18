@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>google tag manager on Chaoming's Blog</title><link>https://chaoming.li/tags/google-tag-manager/</link><description>Recent content in google tag manager on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/google-tag-manager/index.xml" rel="self" type="application/rss+xml"/><item><title>Build Your Own Web Analytics Platform in 25 Minutes</title><link>https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/</link><pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/</guid><description>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427.png" alt="Featured image of post Build Your Own Web Analytics Platform in 25 Minutes" />&lt;p>I gave a presentation in MeasureCamp Melbourne, and the topic was “Build Your Own Web Analytics Platform in 25 Minutes”. In MeasureCamp, each session has 25 minutes of presentation time, that’s where the 25 minutes on the topic from. What inspired me to do this talk was a conversation in Measure Slack about sending Google Analytics data into your own database. And I think it is an interesting thing to do to build a web analytics platform from scratch without spending a lot of time and money.&lt;/p>
+&lt;p>Building your own web analytics platform can be much simpler than you would think. In this presentation, there is pretty much no coding knowledge required. If you are familiar with AWS S3 and CloudFront, it is very simple. If not, don’t worry, AWS has a really good interface so you just need to click through a series of buttons. Below is the high-level architecture of the platform. Option #1 was something I built in my previous job for production support. It was not based on any cloud so it was able to store personally identifiable information (PII) and the production support team used it to help to recreate scenarios for debugging. Option #2 is the solution in this presentation, which uses AWS cloud so all the infrastructure can be set up in minutes. You will need to have an AWS account to do it. You can &lt;a class="link" href="https://aws.amazon.com/free/" target="_blank" rel="noopener"
+>sign up for a free account here&lt;/a>.&lt;/p>
+&lt;p>The whole process includes 8 steps. I will go through all the 8 steps here.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427.png"
+width="768"
+height="427"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hub4d3af91cee52a79943037e924e82338_245585_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hub4d3af91cee52a79943037e924e82338_245585_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Simple Web Analytics System Architecture"
+class="gallery-image"
+data-flex-grow="179"
+data-flex-basis="431px"
+>&lt;/p>
+&lt;h2 id="step-1-create-an-s3-bucket-to-store-log-files">Step 1: Create an S3 bucket to store log files&lt;/h2>
+&lt;p>First of all, you will need an S3 bucket to store all the log files. AWS S3 is a storage service, where you can store a lot of files in the cloud with pretty low costs. S3 buckets are like folders, you can store a group of files within.&lt;/p>
+&lt;p>Login to your AWS account, click on S3 in the product list menu under the Storage section and click on Create Bucket button. Give a name to the bucket, something like “my-web-analytics-logs”, and click Next all the way through. You have your S3 bucket created now.&lt;/p>
+&lt;h2 id="step-2-create-an-s3-bucket-to-store-the-tracking-pixel-image">Step 2: Create an S3 bucket to store the tracking pixel image&lt;/h2>
+&lt;p>Most web analytics solutions are using an invisible pixel image to track data. They attach the information to be tracked in the pixel URL as query parameters. So we need an S3 bucket to host this pixel file. Just repeat the process of step 1, but name the bucket “my-web-analytics-pixel”. Upload the pixel file to the bucket. You can grab the pixel file from &lt;a class="link" href="https://s3.amazonaws.com/cli-tracking-demo-pixel/pixel.gif" target="_blank" rel="noopener"
+>https://s3.amazonaws.com/cli-tracking-demo-pixel/pixel.gif&lt;/a>&lt;/p>
+&lt;p>You will need to make the pixel file public so it can be accessed from the Internet. To do so, go to the pixel bucket and tick the checkbox next to the file name, click More and select Make Public.&lt;/p>
+&lt;h2 id="step-3-create-a-cloudfront-distribution-and-enable-logging">Step 3: Create a CloudFront distribution and enable logging&lt;/h2>
+&lt;p>Now, we have our pixel file in the cloud, and we are ready to store the log files. CloudFront is the CDN AWS offers. It is fast and cheap to run. The reason we want to use CloudFront here is to be able to serve the pixel file very fast, so it doesn’t impact the page performance much, and log the data at the same time. Go to CloudFront, click on Create Distribution button, and click on Get Started under the Web section to go to the form to create a distribution.&lt;/p>
+&lt;p>When you create the CloudFront distribution, you will need to enable logging and point to log files to the S3 bucket we created in step 1.&lt;/p>
+&lt;p>You will also need to point the origin to the S3 bucket containing the pixel file so your CloudFront distribution can serve the pixel file. You can leave all the other options as default.&lt;/p>
+&lt;p>After these 3 steps are completed, you are ready to take in whatever data and store it. We should start to work on the part to generate data.&lt;/p>
+&lt;h2 id="step-4-create-a-visitor-id-via-gtm">Step 4: Create a visitor ID via GTM&lt;/h2>
+&lt;p>To track the same visitors across a period, you need a cookie to store a unique random visitor ID. In Google Tag Manager (GTM), go to Variables, and create a custom Javascript variable and name it “Visitor ID”. Copy and paste the code below to the variable. This piece of code will check if the visitor already has a visitor ID cookie “v_id”. If yes, it will read it, refresh the cookie for another 2 years, and return the visitor ID value. Otherwise, it will create a random ID and save it to “v_id” cookie for 2 years, and return the newly created visitor ID value. We will use this value in the next step.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">readCookie&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">RegExp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;(?:^|; )&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">encodeURIComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;=([^;]*)&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cookie&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">writeCookie&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">domain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">expire&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cookie&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s2">&amp;#34;=&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s2">&amp;#34;;domain=.&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">domain&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s2">&amp;#34;;path=/;expires=&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">expire&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">visitorId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">readCookie&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;v_id&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">visitorId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">visitorId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">999999&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">100000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">100000&lt;/span>&lt;span class="p">)).&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setTime&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">365&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">24&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">writeCookie&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;v_id&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">visitorId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hostname&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">toUTCString&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">visitorId&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="step-5-create-an-image-tag-in-gtm-and-attach-data-in-the-url-query-parameters">Step 5: Create an image tag in GTM and attach data in the URL query parameters&lt;/h2>
+&lt;p>We are going to use the pixel file in this step. Create an image tag in GTM. In the URL field, put in “https://your-cloud-front-distribution.cloudfront.net/pixel.gif?vid={{Visitor ID}}&amp;amp;pageUrl={{Page URL}}”, set the trigger as All Pages. &lt;code>{{Visitor ID}}&lt;/code> is the variable created in the previous step, and I attached the page URL in the query parameters in this example but you can attach whatever variables in your GTM as key-value pairs in the same way.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337.png"
+width="768"
+height="337"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu75cd23ab8fc84cb5aa7db0dae4db8789_88175_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu75cd23ab8fc84cb5aa7db0dae4db8789_88175_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Google Tag Manager Custom Tag"
+class="gallery-image"
+data-flex-grow="227"
+data-flex-basis="546px"
+>&lt;/p>
+&lt;h2 id="step-6-publish-gtm">Step 6: Publish GTM&lt;/h2>
+&lt;p>By now, all the data collection and storage is set up. Once you publish GTM to your websites, data will start to flow in soon. The way it is set up in this demo doesn’t support real-time data streaming, so you will need to wait a few minutes to have your first log file deposited in the S3 bucket.&lt;/p>
+&lt;h2 id="step-7-create-an-athena-table-schema">Step 7: Create an Athena table schema&lt;/h2>
+&lt;p>After the data files are in your S3 bucket, you can start to query the data. AWS Athena is probably the fastest way to do so if you like to use SQL. I prefer to create a table manually in Athena than using the crawler feature because I found the crawler is not always working properly in my experience.&lt;/p>
+&lt;p>To manually create a table in Athena, you will need to point the table to your log file s3 bucket and define all the fields in the table. You can find &lt;a class="link" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html" target="_blank" rel="noopener"
+>the CloudFront log file format here&lt;/a>. There are 25 fields, so take your time to go through them one by one. In my demo, I only created the first 12 fields because that’s good enough for the demo, and the 12th field is the one stores the query parameter data. Here is a screenshot of the fields in my table.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381.png"
+width="768"
+height="381"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu62c2c7d44b1a4583eaabf69077b16cd4_114345_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu62c2c7d44b1a4583eaabf69077b16cd4_114345_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="AWS Athena Data Schema"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="483px"
+>&lt;/p>
+&lt;h2 id="step-8-check-your-data">&lt;strong>S&lt;/strong>tep 8: Check your data&lt;/h2>
+&lt;p>You can use “select * from database_name.table_name” to inspect all the data you have in the log files. Spend some time learning your data, you have the IP address, the user agent string, and the data you send through from the pixel.&lt;/p>
+&lt;p>Here is the SQL to count visitors by page URLs and sort the results in descending order. The example uses the &lt;code>url_extract_parameter&lt;/code> function to get the value out of the query parameters by name. This function only works for full URLs, so I have to concatenate some fields to recreate the full URLs to allow the function to work properly,&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">DISTINCT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">VisitorID&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Visitors&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PageUrl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">url_extract_parameter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">RequestURL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;vid&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">VisitorID&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">url_decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url_extract_parameter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">RequestURL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;url&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PageUrl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;https://&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;cs-host&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;cs-uri-stem&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;cs-uri-query&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">RequestURL&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;webanalytics&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="s2">&amp;#34;logs&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GROUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PageUrl&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Visitors&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DESC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>By now, you have a very simple web analytics platform that can take in whatever data you want to track as long as you have it in your GTM variables. This is just a super-simplified demo of how web analytics platforms work in principle. There are a lot of missing parts such as cross-domain tracking, data enrichment, data visualisation, etc. However, it is also very flexible because it is not limited by any platform. You have the freedom to design what to track.&lt;/p>
+&lt;p>I hope this article helps you understand how web analytics platform collects data at a high level, and feel free to extend it to other usages like tracking non-web data.&lt;/p></description></item></channel></rss>

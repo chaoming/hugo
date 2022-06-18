@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>certificate on Chaoming's Blog</title><link>https://chaoming.li/tags/certificate/</link><description>Recent content in certificate on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/certificate/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
+&lt;h2 id="generating-a-certificate-signing-request">Generating a certificate signing request&lt;/h2>
+&lt;p>To get a certificate, firstly, you need to generate a certificate signing request to your SSL certificate issuer so that they can provide you with a valid certificate. Here is the command using OpenSSL to do it.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Input the relevant information and put your domain name in Common Name, it will generate two files: server.key which is your private key, and server.csr which is the certificate signing request.&lt;/p>
+&lt;h2 id="get-your-ssl-certificate">Get your SSL certificate&lt;/h2>
+&lt;p>Provide your certificate issuer with your CSR file, they will generate your SSL certificate. Usually, this process only takes a few minutes. However, the process varies depending on which issuer you are going to use.&lt;/p>
+&lt;p>The format of the certificate can also be different depending on the issuer. I got the X.509 certificate in a crt file in this case.&lt;/p>
+&lt;h2 id="convert-your-private-key-to-pem-format">Convert your private key to PEM format&lt;/h2>
+&lt;p>If you only need to put your certificate in the GCP load balancer, you can skip this step as it doesn’t need a PEM format certificate. This is for App Engine. I don’t get why Google can’t just let me manage all my certificates in one place and in one format. This is actually a bit annoying.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">openssl rsa -in server.key -out server.key.pem
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="upload-certificate-and-pem-key-to-app-engine">Upload certificate and PEM key to App Engine&lt;/h2>
+&lt;p>In the App Engine settings interface, click on the SSL certificates tab and you can upload a certificate.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
+width="526"
+height="97"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="App Engine Settings Screenshot"
+class="gallery-image"
+data-flex-grow="542"
+data-flex-basis="1301px"
+>&lt;/p>
+&lt;p>That will bring up this interface where you can copy and paste your certificate and private key.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
+width="511"
+height="482"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Add SSL Certificate to App Engine Screenshot"
+class="gallery-image"
+data-flex-grow="106"
+data-flex-basis="254px"
+>&lt;/p>
+&lt;p>Give your certificate a name. I usually put the year it is issued in it so that when I need to renew it next year, I will have a good idea of which certificate is for which year.&lt;/p>
+&lt;p>Copy and paste your X.509 certificate file content and the PEM format private key content in the two boxes. Click “Upload” to save the certificate and key. It will ask you to enable SSL for the custom domains you have in App Engine. Just pick the relevant domains of the certificate.&lt;/p>
+&lt;p>This change will take about 10 minutes or more to become effective. You can verify that by checking your domain’s SSL certificate with any browser. It’s better to check it with all major browsers to make sure they like your certificate.&lt;/p>
+&lt;h2 id="upload-certificate-to-the-gcp-load-balancer">Upload certificate to the GCP load balancer&lt;/h2>
+&lt;p>To upload a certificate to the GCP load balancer, you need to go to Network services then edit your load balancer. Then click on Frontend configuration and you will be able to edit the port 443 configuration settings where you can manage your SSL certificates.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
+width="647"
+height="483"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Load Balancer Screenshot"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="321px"
+>&lt;/p>
+&lt;p>After clicking on “Create a new certificate” in the Certificate dropdown list, you will see the interface to copy and paste in your certificate, certificate chain (root certificate), and the private key.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
+width="479"
+height="610"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Add SSL Certificate to Load Balancer Screenshot"
+class="gallery-image"
+data-flex-grow="78"
+data-flex-basis="188px"
+>&lt;/p>
+&lt;p>Once the certificate is created in the system, you can assign it to the load balancer and GCP will ask if you want to delete your unassigned certificate. My suggestion is that only delete it after you can confirm the new certificate is working without any issue.&lt;/p>
+&lt;p>Similar to App Engine, the new certificate will only take effect after about 10 minutes or so. Verify it with all major browsers to make sure they like it.&lt;/p>
+&lt;p>In my experience missing the certificate chain can cause issues with some browsers but Chrome might not mind it.&lt;/p>
+&lt;h2 id="conclusion">Conclusion:&lt;/h2>
+&lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
+&lt;p>Again, I think GCP should have a centralised place to manage all the certificates so you can just pick them up in the different products. That will save some effort.&lt;/p>
+&lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item></channel></rss>
