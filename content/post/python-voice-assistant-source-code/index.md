@@ -18,9 +18,9 @@ Back in mid-2015, I created my first and only Python script so far. The script w
 
 Here are a couple of videos I took back in 2015 when it was built. The script was running on a Raspberry Pi 3 with a USB sound card connecting to a microphone and a speaker.
 
-[https://www.youtube.com/watch?v=mphr9-64irA](https://www.youtube.com/watch?v=mphr9-64irA)
+{{< youtube id="mphr9-64irA" >}}
 
-[https://www.youtube.com/watch?v=4IHVUHfimCw](https://www.youtube.com/watch?v=4IHVUHfimCw)
+{{< youtube id="4IHVUHfimCw" >}}
 
 You will notice that it was pretty slow in response. That’s probably because I couldn’t figure out how to lower the sound input sample rate. The rate was 44.1KHz. I think 8KHz is good enough and it can cut down the data size significantly.
 
