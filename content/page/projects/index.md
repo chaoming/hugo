@@ -5,6 +5,10 @@ links:
     description: Understand why users struggle, and how this impacts conversions and revenue.
     website: https://www.insightech.com
     image: insightech.png
+  - title: Fireact
+    description: Reactjs + Firebase + Stripe = Open source subscription based SaaS web applications.
+    website: https://www.fireact.dev
+    image: fireact-logo.png
   - title: VisitorAPI
     description: Fast and reliable API to detect visitor location and device info.
     website: https://www.visitorapi.com
