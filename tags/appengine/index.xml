@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>appengine on Chaoming's Blog</title><link>https://chaoming.li/tags/appengine/</link><description>Recent content in appengine on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/appengine/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
-&lt;h2 id="why-you-should-do-this">Why You Should Do This:&lt;/h2>
+&lt;h2 id="why-you-should-do-this">Why You Should Do This&lt;/h2>
 &lt;p>Good reasons to automate the deployment process are:&lt;/p>
 &lt;ul>
 &lt;li>Reduce the impact of human error on a deployment&lt;/li>
@@ -7,7 +7,7 @@
 &lt;li>Restrict permission to deploy to certain environments (e.g. production) with a process&lt;/li>
 &lt;li>Streamline the deployment process and gain the benefits of automation (e.g. testing)&lt;/li>
 &lt;/ul>
-&lt;h2 id="assumptions">Assumptions:&lt;/h2>
+&lt;h2 id="assumptions">Assumptions&lt;/h2>
 &lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
 &lt;p>In this article, I’ll only assume that you have an App Engine application. I have used this process for Golang and PHP, but it will work for Python and other languages.&lt;/p>
 &lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions&lt;/h2>
@@ -182,7 +182,7 @@ data-flex-basis="188px"
 &lt;p>Once the certificate is created in the system, you can assign it to the load balancer and GCP will ask if you want to delete your unassigned certificate. My suggestion is that only delete it after you can confirm the new certificate is working without any issue.&lt;/p>
 &lt;p>Similar to App Engine, the new certificate will only take effect after about 10 minutes or so. Verify it with all major browsers to make sure they like it.&lt;/p>
 &lt;p>In my experience missing the certificate chain can cause issues with some browsers but Chrome might not mind it.&lt;/p>
-&lt;h2 id="conclusion">Conclusion:&lt;/h2>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
 &lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
 &lt;p>Again, I think GCP should have a centralised place to manage all the certificates so you can just pick them up in the different products. That will save some effort.&lt;/p>
 &lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item><item><title>How to Use Docker for Go App Engine Development and Deploy to Standard Environment</title><link>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</link><pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/43219741-fdfef302-8ffc-11e8-96f4-4a2ab2ce136b_orig-500x250.png" alt="Featured image of post How to Use Docker for Go App Engine Development and Deploy to Standard Environment" />&lt;p>App Engine is great but if you are using Docker, you can only use Flexible Environment which is not what I want as I would love to continue to use Standard Environment. Here is &lt;a class="link" href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank" rel="noopener"

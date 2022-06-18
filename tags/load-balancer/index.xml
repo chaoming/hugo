@@ -75,7 +75,7 @@ data-flex-basis="188px"
 &lt;p>Once the certificate is created in the system, you can assign it to the load balancer and GCP will ask if you want to delete your unassigned certificate. My suggestion is that only delete it after you can confirm the new certificate is working without any issue.&lt;/p>
 &lt;p>Similar to App Engine, the new certificate will only take effect after about 10 minutes or so. Verify it with all major browsers to make sure they like it.&lt;/p>
 &lt;p>In my experience missing the certificate chain can cause issues with some browsers but Chrome might not mind it.&lt;/p>
-&lt;h2 id="conclusion">Conclusion:&lt;/h2>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
 &lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
 &lt;p>Again, I think GCP should have a centralised place to manage all the certificates so you can just pick them up in the different products. That will save some effort.&lt;/p>
 &lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item></channel></rss>

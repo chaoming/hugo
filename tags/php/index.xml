@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>php on Chaoming's Blog</title><link>https://chaoming.li/tags/php/</link><description>Recent content in php on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/php/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
-&lt;h2 id="why-you-should-do-this">Why You Should Do This:&lt;/h2>
+&lt;h2 id="why-you-should-do-this">Why You Should Do This&lt;/h2>
 &lt;p>Good reasons to automate the deployment process are:&lt;/p>
 &lt;ul>
 &lt;li>Reduce the impact of human error on a deployment&lt;/li>
@@ -7,7 +7,7 @@
 &lt;li>Restrict permission to deploy to certain environments (e.g. production) with a process&lt;/li>
 &lt;li>Streamline the deployment process and gain the benefits of automation (e.g. testing)&lt;/li>
 &lt;/ul>
-&lt;h2 id="assumptions">Assumptions:&lt;/h2>
+&lt;h2 id="assumptions">Assumptions&lt;/h2>
 &lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
 &lt;p>In this article, I’ll only assume that you have an App Engine application. I have used this process for Golang and PHP, but it will work for Python and other languages.&lt;/p>
 &lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions&lt;/h2>
