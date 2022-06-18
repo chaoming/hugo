@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji:
-        subtitle: CEO of Insightech, tech entrepreneur.
+        subtitle: Tech entrepreneur, CEO of Insightech.
         avatar:
             enabled: true
             local: true
@@ -179,17 +179,21 @@ menu:
     main: []
 
     social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/chaoming
+        - identifier: linkedin
+          name: Linkedin
+          url: https://www.linkedin.com/in/chaomingli/
           params:
-              icon: brand-github
-
+              icon: brand-linkedin
         - identifier: twitter
           name: Twitter
           url: https://twitter.com/ChaomingLi
           params:
               icon: brand-twitter
+        - identifier: github
+          name: GitHub
+          url: https://github.com/chaoming
+          params:
+              icon: brand-github
 
 related:
     includeNewer: true
