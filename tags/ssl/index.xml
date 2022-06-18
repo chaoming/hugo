@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssl on Chaoming's Blog</title><link>https://chaoming.li/tags/ssl/</link><description>Recent content in ssl on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssl on Chaoming's Blog</title><link>https://chaoming.github.io/hugo/tags/ssl/</link><description>Recent content in ssl on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.github.io/hugo/tags/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.github.io/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
 &lt;h2 id="generating-a-certificate-signing-request">Generating a certificate signing request&lt;/h2>
 &lt;p>To get a certificate, firstly, you need to generate a certificate signing request to your SSL certificate issuer so that they can provide you with a valid certificate. Here is the command using OpenSSL to do it.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -25,10 +25,10 @@
 &lt;/div>
 &lt;/div>&lt;h2 id="upload-certificate-and-pem-key-to-app-engine">Upload certificate and PEM key to App Engine&lt;/h2>
 &lt;p>In the App Engine settings interface, click on the SSL certificates tab and you can upload a certificate.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
+&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
 width="526"
 height="97"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="App Engine Settings Screenshot"
 class="gallery-image"
@@ -36,10 +36,10 @@ data-flex-grow="542"
 data-flex-basis="1301px"
 >&lt;/p>
 &lt;p>That will bring up this interface where you can copy and paste your certificate and private key.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
+&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
 width="511"
 height="482"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to App Engine Screenshot"
 class="gallery-image"
@@ -51,10 +51,10 @@ data-flex-basis="254px"
 &lt;p>This change will take about 10 minutes or more to become effective. You can verify that by checking your domain’s SSL certificate with any browser. It’s better to check it with all major browsers to make sure they like your certificate.&lt;/p>
 &lt;h2 id="upload-certificate-to-the-gcp-load-balancer">Upload certificate to the GCP load balancer&lt;/h2>
 &lt;p>To upload a certificate to the GCP load balancer, you need to go to Network services then edit your load balancer. Then click on Frontend configuration and you will be able to edit the port 443 configuration settings where you can manage your SSL certificates.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
+&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
 width="647"
 height="483"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Load Balancer Screenshot"
 class="gallery-image"
@@ -62,10 +62,10 @@ data-flex-grow="133"
 data-flex-basis="321px"
 >&lt;/p>
 &lt;p>After clicking on “Create a new certificate” in the Certificate dropdown list, you will see the interface to copy and paste in your certificate, certificate chain (root certificate), and the private key.&lt;/p>
-&lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
+&lt;p>&lt;img src="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
 width="479"
 height="610"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.github.io/hugo/hugo/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to Load Balancer Screenshot"
 class="gallery-image"
