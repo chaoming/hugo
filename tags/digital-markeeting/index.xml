@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>digital markeeting on Chaoming's Blog</title><link>https://chaoming.li/tags/digital-markeeting/</link><description>Recent content in digital markeeting on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/digital-markeeting/index.xml" rel="self" type="application/rss+xml"/><item><title>How to trigger marketing tags based on visitor location in GTM</title><link>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</link><pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/syj23egvntavpv64up1t.webp" alt="Featured image of post How to trigger marketing tags based on visitor location in GTM" />&lt;p>Location variables are not built-in variables in Google Tag Manager (GTM). This article will show you how you can trigger marketing tags based on visitor location by using VisitorAPI in GTM.&lt;/p>
+&lt;p>First, import the VisitorAPI tag template to your GTM container by clicking &lt;strong>Templates&lt;/strong> → &lt;strong>Search Gallery&lt;/strong>, then search for “visitorapi” to import the tag template to your GTM container.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api.png"
+width="775"
+height="180"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hue7839c045f96f1c6ae775d261b03a363_14377_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hue7839c045f96f1c6ae775d261b03a363_14377_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Import VisitorAPI template in Google Tag Manager"
+class="gallery-image"
+data-flex-grow="430"
+data-flex-basis="1033px"
+>&lt;/p>
+&lt;p>Once the tag template is imported, create a new tag with the VisitorAPI tag template, and put in your VisitorAPI project ID. To get a VisitorAPI project ID, sign up for an account and create a free or paid project in VisitorAPI. Don’t forget to add your website domains to the authorised domain list in your VisitorAPI project to make the API works for your website.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag.png"
+width="957"
+height="594"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hub5aab6a6448ddf5081f4b138f4b93e33_40606_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hub5aab6a6448ddf5081f4b138f4b93e33_40606_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Create VisitorAPI tag in Google Tag Manager"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="386px"
+>&lt;/p>
+&lt;p>The VisitorAPI tag will call the API to retrieve the visitor’s location data including country, state and city, and trigger a new event “visitor-api-success” which you can use to trigger the tags that are targeting certain locations.&lt;/p>
+&lt;p>To use the location variables, you will need to create them in your GTM container. VisitorAPI returns the country, state and city of the visitors. Here is how to create those three variables: click &lt;strong>Variables&lt;/strong> → &lt;strong>New&lt;/strong>, then select &lt;strong>Data Layer Variable&lt;/strong>. Name your variables as “Country Code” and input “visitorApiCountryCode” to the &lt;strong>Data Layer Variable Name&lt;/strong> field.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables.png"
+width="1742"
+height="557"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu8e6537aedb12e9dc283a514a737f5e0b_51068_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu8e6537aedb12e9dc283a514a737f5e0b_51068_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Create VisitorAPI variables in Google Tag Manager"
+class="gallery-image"
+data-flex-grow="312"
+data-flex-basis="750px"
+>&lt;/p>
+&lt;p>Here is a list of all the variables VisitorAPI returns&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>GTM Variable Name&lt;/th>
+&lt;th>Data Layer Variable Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>IP Address&lt;/td>
+&lt;td>visitorApiIpAddress&lt;/td>
+&lt;td>The IP address of the visitor.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Country Code&lt;/td>
+&lt;td>visitorApiCountryCode&lt;/td>
+&lt;td>The country from which the visitor is located as an ISO 3166-1 alpha-2 country code.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Country Name&lt;/td>
+&lt;td>visitorApiCountryName&lt;/td>
+&lt;td>The full name of the country in which the visitor is located in.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Currencies&lt;/td>
+&lt;td>visitorApiCurrencies&lt;/td>
+&lt;td>An array of the official currencies of the country in which the visitor is located.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Languages&lt;/td>
+&lt;td>visitorApiLanguages&lt;/td>
+&lt;td>An array of the official languages of the country in which the visitor is located in.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Region&lt;/td>
+&lt;td>visitorApiRegion&lt;/td>
+&lt;td>Name of the region, state or province in which the visitor is located. The complete list of valid region values is found in the ISO-3166-2 standard.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>City&lt;/td>
+&lt;td>visitorApiCity&lt;/td>
+&lt;td>Name of the city in which the visitor is located in.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>City LatLong&lt;/td>
+&lt;td>visitorApiCityLatLong&lt;/td>
+&lt;td>Latitude and longitude of the city in which the visitor is located in.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Browser&lt;/td>
+&lt;td>visitorApiBrowser&lt;/td>
+&lt;td>The browser name which the visitor uses.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Browser Version&lt;/td>
+&lt;td>visitorApiBrowserVersion&lt;/td>
+&lt;td>The browser version which the visitor uses.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Device Brand&lt;/td>
+&lt;td>visitorApiDeviceBrand&lt;/td>
+&lt;td>The brand of the device which the visitor uses. Only applicable to mobile devices.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Device Model&lt;/td>
+&lt;td>visitorApiDeviceModel&lt;/td>
+&lt;td>The model of the device which the visitor uses. Only applicable to mobile devices.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Device Family&lt;/td>
+&lt;td>visitorApiDeviceFamily&lt;/td>
+&lt;td>The family of the device which the visitor uses. Only applicable to mobile devices.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>OS&lt;/td>
+&lt;td>visitorApiOs&lt;/td>
+&lt;td>The operating system name of the device which the visitor uses.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>OS Version&lt;/td>
+&lt;td>visitorApiOsVersion&lt;/td>
+&lt;td>The operating system version of the device which the visitor uses.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>You can use the variables in trigger conditions in your GTM container to fire the tags targeting visitors based on locations. For example, if you want to target visitors in the US, you can create a trigger with the condition “Country Code” equals “us”.&lt;/p>
+&lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country.png"
+width="1740"
+height="559"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_huf78e538b7db9669e5ed6c8eff2d25a67_54958_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_huf78e538b7db9669e5ed6c8eff2d25a67_54958_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Create a marketing tag for the US visitors in Google Tag Manager"
+class="gallery-image"
+data-flex-grow="311"
+data-flex-basis="747px"
+>&lt;/p>
+&lt;p>Not only you can trigger tags based on the location variables, but you can also use the variables in your tags as parameters &lt;code>{{Country Code}}&lt;/code> to pass the data to your tags.&lt;/p>
+&lt;p>The location variables make it possible to personalize user experience based on visitor location by using GTM. Please feel free to leave a comment to share how you will use the location variables in GTM.&lt;/p></description></item></channel></rss>
