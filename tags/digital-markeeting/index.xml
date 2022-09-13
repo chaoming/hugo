@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>digital markeeting on Chaoming's Blog</title><link>https://chaoming.li/tags/digital-markeeting/</link><description>Recent content in digital markeeting on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/digital-markeeting/index.xml" rel="self" type="application/rss+xml"/><item><title>How to trigger marketing tags based on visitor location in GTM</title><link>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</link><pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/syj23egvntavpv64up1t.webp" alt="Featured image of post How to trigger marketing tags based on visitor location in GTM" />&lt;p>Location variables are not built-in variables in Google Tag Manager (GTM). This article will show you how you can trigger marketing tags based on visitor location by using VisitorAPI in GTM.&lt;/p>
-&lt;p>First, import the VisitorAPI tag template to your GTM container by clicking &lt;strong>Templates&lt;/strong> → &lt;strong>Search Gallery&lt;/strong>, then search for “visitorapi” to import the tag template to your GTM container.&lt;/p>
+&lt;p>First, import the VisitorAPI tag template to your GTM container by clicking &lt;strong>Templates&lt;/strong> → &lt;strong>Search Gallery&lt;/strong>, then search for &lt;a class="link" href="https://tagmanager.google.com/gallery/#/owners/visitorapi/templates/visitor-api-google-tag-manager" target="_blank" rel="noopener"
+>“visitorapi”&lt;/a> to import the tag template to your GTM container.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api.png"
 width="775"
 height="180"
@@ -10,7 +11,8 @@ class="gallery-image"
 data-flex-grow="430"
 data-flex-basis="1033px"
 >&lt;/p>
-&lt;p>Once the tag template is imported, create a new tag with the VisitorAPI tag template, and put in your VisitorAPI project ID. To get a VisitorAPI project ID, sign up for an account and create a free or paid project in VisitorAPI. Don’t forget to add your website domains to the authorised domain list in your VisitorAPI project to make the API works for your website.&lt;/p>
+&lt;p>Once the tag template is imported, create a new tag with the &lt;a class="link" href="https://www.visitorapi.com/" target="_blank" rel="noopener"
+>VisitorAPI&lt;/a> tag template, and put in your VisitorAPI project ID. To get a VisitorAPI project ID, sign up for an account and create a free or paid project in VisitorAPI. Don’t forget to add your website domains to the authorised domain list in your VisitorAPI project to make the API works for your website.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag.png"
 width="957"
 height="594"
