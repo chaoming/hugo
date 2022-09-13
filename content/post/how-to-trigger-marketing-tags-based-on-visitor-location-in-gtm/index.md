@@ -19,11 +19,11 @@ image = "syj23egvntavpv64up1t.webp"
 
 Location variables are not built-in variables in Google Tag Manager (GTM). This article will show you how you can trigger marketing tags based on visitor location by using VisitorAPI in GTM.
 
-First, import the VisitorAPI tag template to your GTM container by clicking **Templates** → **Search Gallery**, then search for “visitorapi” to import the tag template to your GTM container.
+First, import the VisitorAPI tag template to your GTM container by clicking **Templates** → **Search Gallery**, then search for [“visitorapi”](https://tagmanager.google.com/gallery/#/owners/visitorapi/templates/visitor-api-google-tag-manager) to import the tag template to your GTM container.
 
 ![Import VisitorAPI template in Google Tag Manager](gtm-visitor-api.png)
 
-Once the tag template is imported, create a new tag with the VisitorAPI tag template, and put in your VisitorAPI project ID. To get a VisitorAPI project ID, sign up for an account and create a free or paid project in VisitorAPI. Don’t forget to add your website domains to the authorised domain list in your VisitorAPI project to make the API works for your website.
+Once the tag template is imported, create a new tag with the [VisitorAPI](https://www.visitorapi.com/) tag template, and put in your VisitorAPI project ID. To get a VisitorAPI project ID, sign up for an account and create a free or paid project in VisitorAPI. Don’t forget to add your website domains to the authorised domain list in your VisitorAPI project to make the API works for your website.
 
 ![Create VisitorAPI tag in Google Tag Manager](create-visitor-api-tag.png)
 
