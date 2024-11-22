@@ -1,9 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Chaoming's Blog</title><link>https://chaoming.li/page/</link><description>Recent content in Pages on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://chaoming.li/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About Me</title><link>https://chaoming.li/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/about-me/</guid><description>&lt;p>Hi,&lt;/p>
-&lt;p>Welcome to my website. I am Chaoming Li. I am passionate about technologies and entrepreneurship.&lt;/p>
-&lt;p>I am the CEO and co-founder of &lt;a class="link" href="https://www.insightech.com" target="_blank" rel="noopener"
->Insightech&lt;/a>, a digital analytics solution startup that focuses on helping businesses to understand their digital experiences and to lift their conversion rates in the digital channel.&lt;/p>
-&lt;p>I develop software mainly using Go for the backend and React for the frontend. I like to learn about new ideas and technologies and apply them to solve problems in the real world. You can find a big portion of my posts about tech here.&lt;/p>
-&lt;p>If you like what I write about and what I am doing, feel free to follow me on &lt;a class="link" href="https://www.linkedin.com/in/chaomingli/" target="_blank" rel="noopener"
->Linkedin&lt;/a>, &lt;a class="link" href="https://twitter.com/ChaomingLi" target="_blank" rel="noopener"
->Twitter&lt;/a> and &lt;a class="link" href="https://github.com/chaoming" target="_blank" rel="noopener"
->Github&lt;/a>.&lt;/p></description></item><item><title>Archives</title><link>https://chaoming.li/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/archives/</guid><description/></item><item><title>Projects</title><link>https://chaoming.li/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/projects/</guid><description>&lt;p>I am passionate about technologies and building things that help people in their work and life. Here are the projects I created and am involved.&lt;/p></description></item><item><title>Search</title><link>https://chaoming.li/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/search/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Chaoming's Blog</title><link>https://chaoming.li/page/</link><description>Recent content in Pages on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://chaoming.li/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About Me</title><link>https://chaoming.li/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/about-me/</guid><description>&lt;p>Hello! 👋&lt;/p>
+&lt;p>I&amp;rsquo;m Chaoming Li, a tech entrepreneur and software engineer with a passion for building innovative digital solutions that make a real impact.&lt;/p>
+&lt;p>As the CEO and co-founder of &lt;a class="link" href="https://www.insightech.com" target="_blank" rel="noopener"
+>Insightech&lt;/a>, I lead a team dedicated to revolutionizing digital analytics. Our platform helps businesses deeply understand their digital experiences and optimize conversion rates through advanced analytics and insights.&lt;/p>
+&lt;h2 id="technical-expertise">Technical Expertise
+&lt;/h2>&lt;p>My technical foundation is built on:&lt;/p>
+&lt;ul>
+&lt;li>Backend development with Go&lt;/li>
+&lt;li>Frontend development with React&lt;/li>
+&lt;li>Cloud infrastructure and scalable systems&lt;/li>
+&lt;li>Digital analytics and optimization&lt;/li>
+&lt;/ul>
+&lt;p>I believe in the power of technology to solve real-world problems and am constantly exploring new technologies and methodologies to push the boundaries of what&amp;rsquo;s possible.&lt;/p>
+&lt;h2 id="writing--sharing">Writing &amp;amp; Sharing
+&lt;/h2>&lt;p>On this blog, I share my experiences and insights about:&lt;/p>
+&lt;ul>
+&lt;li>Software development best practices&lt;/li>
+&lt;li>Technology trends and innovations&lt;/li>
+&lt;li>Entrepreneurship journey&lt;/li>
+&lt;li>Digital analytics and optimization strategies&lt;/li>
+&lt;/ul>
+&lt;h2 id="connect-with-me">Connect With Me
+&lt;/h2>&lt;p>I&amp;rsquo;m always excited to connect with fellow tech enthusiasts, entrepreneurs, and innovators. You can find me on:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/chaomingli/" target="_blank" rel="noopener"
+>LinkedIn&lt;/a> - For professional networking and industry insights&lt;/li>
+&lt;li>&lt;a class="link" href="https://twitter.com/ChaomingLi" target="_blank" rel="noopener"
+>Twitter&lt;/a> - For tech discussions and updates&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/chaoming" target="_blank" rel="noopener"
+>GitHub&lt;/a> - For code collaborations and open-source contributions&lt;/li>
+&lt;/ul>
+&lt;p>Feel free to reach out if you&amp;rsquo;re interested in digital analytics, tech entrepreneurship, or just want to chat about the latest in technology!&lt;/p></description></item><item><title>Archives</title><link>https://chaoming.li/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/archives/</guid><description/></item><item><title>Projects</title><link>https://chaoming.li/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/projects/</guid><description>&lt;p>I am passionate about technologies and building things that help people in their work and life. Here are the projects I created and am involved.&lt;/p></description></item><item><title>Search</title><link>https://chaoming.li/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/search/</guid><description/></item></channel></rss>

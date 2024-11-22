@@ -1,23 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>firebase on Chaoming's Blog</title><link>https://chaoming.li/tags/firebase/</link><description>Recent content in firebase on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/firebase/index.xml" rel="self" type="application/rss+xml"/><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder&lt;/h2>
-&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firebase on Chaoming's Blog</title><link>https://chaoming.li/tags/firebase/</link><description>Recent content in Firebase on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/firebase/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing fireact.dev: An Open Source SaaS Framework Built with AI</title><link>https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/</guid><description>&lt;img src="https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/fireact.png" alt="Featured image of post Introducing fireact.dev: An Open Source SaaS Framework Built with AI" />&lt;p>I&amp;rsquo;m excited to introduce &lt;a class="link" href="https://www.fireact.dev" target="_blank" rel="noopener"
+>fireact.dev&lt;/a>, an open-source SaaS framework that brings together the power of React, Firebase, and Stripe to revolutionize how developers build subscription-based web applications. As someone deeply passionate about creating technology that empowers others, I built fireact.dev to address the common challenges developers face when launching SaaS products.&lt;/p>
+&lt;h2 id="what-is-fireactdev">What is fireact.dev?
+&lt;/h2>&lt;p>fireact.dev is a comprehensive framework that combines three powerful technologies:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>React&lt;/strong>: For building dynamic and responsive user interfaces&lt;/li>
+&lt;li>&lt;strong>Firebase&lt;/strong>: For secure authentication and scalable backend services&lt;/li>
+&lt;li>&lt;strong>Stripe&lt;/strong>: For handling subscriptions and payments&lt;/li>
+&lt;/ul>
+&lt;p>The framework provides developers with a solid foundation to build subscription-based SaaS applications without starting from scratch. What makes fireact.dev unique is that both the framework itself and its documentation website were entirely generated using AI technology, showcasing the potential of AI in modern software development.&lt;/p>
+&lt;h2 id="key-features">Key Features
+&lt;/h2>&lt;ol>
+&lt;li>&lt;strong>Authentication System&lt;/strong>: Pre-built user authentication powered by Firebase&lt;/li>
+&lt;li>&lt;strong>Subscription Management&lt;/strong>: Integrated Stripe subscription handling&lt;/li>
+&lt;li>&lt;strong>User Management&lt;/strong>: Complete user administration interface&lt;/li>
+&lt;li>&lt;strong>Role-based Access Control&lt;/strong>: Built-in permission system&lt;/li>
+&lt;li>&lt;strong>Responsive Design&lt;/strong>: Mobile-friendly interface out of the box&lt;/li>
+&lt;li>&lt;strong>Modern Tech Stack&lt;/strong>: Latest React features and best practices&lt;/li>
+&lt;/ol>
+&lt;h2 id="who-should-use-fireactdev">Who Should Use fireact.dev?
+&lt;/h2>&lt;p>fireact.dev is perfect for:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Developers&lt;/strong> looking to launch SaaS products quickly&lt;/li>
+&lt;li>&lt;strong>Startups&lt;/strong> wanting to validate their ideas without heavy investment&lt;/li>
+&lt;li>&lt;strong>Teams&lt;/strong> needing a solid foundation for subscription-based services&lt;/li>
+&lt;li>&lt;strong>Solo entrepreneurs&lt;/strong> building their next big thing&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-power-of-ai-in-development">The Power of AI in Development
+&lt;/h2>&lt;p>What makes fireact.dev particularly interesting is that it&amp;rsquo;s a testament to the capabilities of AI in software development. The entire project, including:&lt;/p>
+&lt;ul>
+&lt;li>Core framework code&lt;/li>
+&lt;li>Component architecture&lt;/li>
+&lt;li>Documentation&lt;/li>
+&lt;li>Website content&lt;/li>
+&lt;/ul>
+&lt;p>was generated through AI assistance. This not only showcases the potential of AI in software development but also ensures that the framework incorporates modern best practices and patterns.&lt;/p>
+&lt;h2 id="my-saas-journey">My SaaS Journey
+&lt;/h2>&lt;p>Building fireact.dev stems from my passion for creating tools that help others succeed. Throughout my career, I&amp;rsquo;ve been involved in various SaaS projects, including:&lt;/p>
+&lt;ul>
+&lt;li>Insightech: A platform for understanding user behavior and its impact on conversions&lt;/li>
+&lt;li>VisitorAPI: A fast and reliable API for visitor detection&lt;/li>
+&lt;li>Custom web analytics solutions&lt;/li>
+&lt;/ul>
+&lt;p>These experiences helped me understand the common challenges in SaaS development and inspired me to create a framework that makes it easier for others to bring their ideas to life.&lt;/p>
+&lt;h2 id="getting-started">Getting Started
+&lt;/h2>&lt;p>fireact.dev is open source and freely available for anyone to use. Whether you&amp;rsquo;re building your first SaaS product or your tenth, fireact.dev provides the foundation you need to focus on what matters most – creating value for your users.&lt;/p>
+&lt;p>Visit &lt;a class="link" href="https://www.fireact.dev" target="_blank" rel="noopener"
+>fireact.dev&lt;/a> to explore the documentation, try out the demo, and start building your next SaaS project with a framework that combines the best of React, Firebase, and Stripe, all brought together through the power of AI.&lt;/p>
+&lt;p>Join us in revolutionizing how SaaS applications are built, and let&amp;rsquo;s create something amazing together.&lt;/p></description></item><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder
+&lt;/h2>&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> website with Jekyll, I have been thinking to move the old blog site to a static solution because:&lt;/p>
 &lt;ul>
 &lt;li>No need for a database, which means less maintenance headache&lt;/li>
 &lt;li>Free hosting options like Github and Firebase&lt;/li>
 &lt;li>Fast, super fast! That is good for UX and SEO&lt;/li>
 &lt;/ul>
-&lt;h2 id="the-solution">The Solution&lt;/h2>
-&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+&lt;h2 id="the-solution">The Solution
+&lt;/h2>&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a> is gaining popularity and it has a lot of free themes too. I picked a theme called &lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
 >Stack&lt;/a>, which looks great in my opinion and is well maintained by its creator.&lt;/p>
 &lt;p>Creating a Hugo site is quite simple following its step-by-step instruction document. The themes are installed as &lt;code>git submodules&lt;/code> which makes them relatively simple to install.&lt;/p>
 &lt;p>Hugo also has a deployment config for Github pages so you can deploy your website by pushing commits to a branch.&lt;/p>
-&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown&lt;/h2>
-&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;!-- raw HTML omitted --> tag in HTML.&lt;/p>
+&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown
+&lt;/h2>&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;h2> tag in HTML.&lt;/p>
 &lt;p>If you don’t want to write with markdown syntax, &lt;a class="link" href="https://www.notion.so/" target="_blank" rel="noopener"
 >Notion&lt;/a> is a great tool. It has a very user-friendly interface for writing content. Once you finish an article, select the whole article and copy it, and you can paste content to a markdown file.&lt;/p>
-&lt;h2 id="my-thoughts">My Thoughts&lt;/h2>
-&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
+&lt;h2 id="my-thoughts">My Thoughts
+&lt;/h2>&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
 &lt;p>I think it’s totally possible to use the same solution for early-stage startups to build their websites and host them on Firebase. For SaaS startup, my thinking is that a static website for the content, and &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> for the web application. All these can be hosted on Firebase with minimum costs.&lt;/p>
 &lt;p>Although Notion is a great tool for writing and converting content to markdown format, I think there is a need for some kind of CMS application that can do a similar job and automate the process to update and deploy static websites. Or maybe just automate the deployment process of Notion articles to static websites, because Notion is already doing a really good job as a writing tool. So that people who don’t know much about Git can also easily update their static websites.&lt;/p></description></item></channel></rss>

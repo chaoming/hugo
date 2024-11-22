@@ -1,10 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chaoming's Blog</title><link>https://chaoming.li/</link><description>Recent content on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/index.xml" rel="self" type="application/rss+xml"/><item><title>How to trigger marketing tags based on visitor location in GTM</title><link>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</link><pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/syj23egvntavpv64up1t.webp" alt="Featured image of post How to trigger marketing tags based on visitor location in GTM" />&lt;p>Location variables are not built-in variables in Google Tag Manager (GTM). This article will show you how you can trigger marketing tags based on visitor location by using VisitorAPI in GTM.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chaoming's Blog</title><link>https://chaoming.li/</link><description>Recent content on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing fireact.dev: An Open Source SaaS Framework Built with AI</title><link>https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/</link><pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/</guid><description>&lt;img src="https://chaoming.li/blog/introducing-fireact.dev-an-open-source-saas-framework-built-with-ai/fireact.png" alt="Featured image of post Introducing fireact.dev: An Open Source SaaS Framework Built with AI" />&lt;p>I&amp;rsquo;m excited to introduce &lt;a class="link" href="https://www.fireact.dev" target="_blank" rel="noopener"
+>fireact.dev&lt;/a>, an open-source SaaS framework that brings together the power of React, Firebase, and Stripe to revolutionize how developers build subscription-based web applications. As someone deeply passionate about creating technology that empowers others, I built fireact.dev to address the common challenges developers face when launching SaaS products.&lt;/p>
+&lt;h2 id="what-is-fireactdev">What is fireact.dev?
+&lt;/h2>&lt;p>fireact.dev is a comprehensive framework that combines three powerful technologies:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>React&lt;/strong>: For building dynamic and responsive user interfaces&lt;/li>
+&lt;li>&lt;strong>Firebase&lt;/strong>: For secure authentication and scalable backend services&lt;/li>
+&lt;li>&lt;strong>Stripe&lt;/strong>: For handling subscriptions and payments&lt;/li>
+&lt;/ul>
+&lt;p>The framework provides developers with a solid foundation to build subscription-based SaaS applications without starting from scratch. What makes fireact.dev unique is that both the framework itself and its documentation website were entirely generated using AI technology, showcasing the potential of AI in modern software development.&lt;/p>
+&lt;h2 id="key-features">Key Features
+&lt;/h2>&lt;ol>
+&lt;li>&lt;strong>Authentication System&lt;/strong>: Pre-built user authentication powered by Firebase&lt;/li>
+&lt;li>&lt;strong>Subscription Management&lt;/strong>: Integrated Stripe subscription handling&lt;/li>
+&lt;li>&lt;strong>User Management&lt;/strong>: Complete user administration interface&lt;/li>
+&lt;li>&lt;strong>Role-based Access Control&lt;/strong>: Built-in permission system&lt;/li>
+&lt;li>&lt;strong>Responsive Design&lt;/strong>: Mobile-friendly interface out of the box&lt;/li>
+&lt;li>&lt;strong>Modern Tech Stack&lt;/strong>: Latest React features and best practices&lt;/li>
+&lt;/ol>
+&lt;h2 id="who-should-use-fireactdev">Who Should Use fireact.dev?
+&lt;/h2>&lt;p>fireact.dev is perfect for:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Developers&lt;/strong> looking to launch SaaS products quickly&lt;/li>
+&lt;li>&lt;strong>Startups&lt;/strong> wanting to validate their ideas without heavy investment&lt;/li>
+&lt;li>&lt;strong>Teams&lt;/strong> needing a solid foundation for subscription-based services&lt;/li>
+&lt;li>&lt;strong>Solo entrepreneurs&lt;/strong> building their next big thing&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-power-of-ai-in-development">The Power of AI in Development
+&lt;/h2>&lt;p>What makes fireact.dev particularly interesting is that it&amp;rsquo;s a testament to the capabilities of AI in software development. The entire project, including:&lt;/p>
+&lt;ul>
+&lt;li>Core framework code&lt;/li>
+&lt;li>Component architecture&lt;/li>
+&lt;li>Documentation&lt;/li>
+&lt;li>Website content&lt;/li>
+&lt;/ul>
+&lt;p>was generated through AI assistance. This not only showcases the potential of AI in software development but also ensures that the framework incorporates modern best practices and patterns.&lt;/p>
+&lt;h2 id="my-saas-journey">My SaaS Journey
+&lt;/h2>&lt;p>Building fireact.dev stems from my passion for creating tools that help others succeed. Throughout my career, I&amp;rsquo;ve been involved in various SaaS projects, including:&lt;/p>
+&lt;ul>
+&lt;li>Insightech: A platform for understanding user behavior and its impact on conversions&lt;/li>
+&lt;li>VisitorAPI: A fast and reliable API for visitor detection&lt;/li>
+&lt;li>Custom web analytics solutions&lt;/li>
+&lt;/ul>
+&lt;p>These experiences helped me understand the common challenges in SaaS development and inspired me to create a framework that makes it easier for others to bring their ideas to life.&lt;/p>
+&lt;h2 id="getting-started">Getting Started
+&lt;/h2>&lt;p>fireact.dev is open source and freely available for anyone to use. Whether you&amp;rsquo;re building your first SaaS product or your tenth, fireact.dev provides the foundation you need to focus on what matters most – creating value for your users.&lt;/p>
+&lt;p>Visit &lt;a class="link" href="https://www.fireact.dev" target="_blank" rel="noopener"
+>fireact.dev&lt;/a> to explore the documentation, try out the demo, and start building your next SaaS project with a framework that combines the best of React, Firebase, and Stripe, all brought together through the power of AI.&lt;/p>
+&lt;p>Join us in revolutionizing how SaaS applications are built, and let&amp;rsquo;s create something amazing together.&lt;/p></description></item><item><title>How to trigger marketing tags based on visitor location in GTM</title><link>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</link><pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/syj23egvntavpv64up1t.webp" alt="Featured image of post How to trigger marketing tags based on visitor location in GTM" />&lt;p>Location variables are not built-in variables in Google Tag Manager (GTM). This article will show you how you can trigger marketing tags based on visitor location by using VisitorAPI in GTM.&lt;/p>
 &lt;p>First, import the VisitorAPI tag template to your GTM container by clicking &lt;strong>Templates&lt;/strong> → &lt;strong>Search Gallery&lt;/strong>, then search for &lt;a class="link" href="https://tagmanager.google.com/gallery/#/owners/visitorapi/templates/visitor-api-google-tag-manager" target="_blank" rel="noopener"
 >“visitorapi”&lt;/a> to import the tag template to your GTM container.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api.png"
 width="775"
 height="180"
-srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hue7839c045f96f1c6ae775d261b03a363_14377_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hue7839c045f96f1c6ae775d261b03a363_14377_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hu1394800746650089028.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/gtm-visitor-api_hu17163381737628448307.png 1024w"
 loading="lazy"
 alt="Import VisitorAPI template in Google Tag Manager"
 class="gallery-image"
@@ -16,7 +64,7 @@ data-flex-basis="1033px"
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag.png"
 width="957"
 height="594"
-srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hub5aab6a6448ddf5081f4b138f4b93e33_40606_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hub5aab6a6448ddf5081f4b138f4b93e33_40606_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hu5032167096408699767.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-tag_hu14629309686127524333.png 1024w"
 loading="lazy"
 alt="Create VisitorAPI tag in Google Tag Manager"
 class="gallery-image"
@@ -28,7 +76,7 @@ data-flex-basis="386px"
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables.png"
 width="1742"
 height="557"
-srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu8e6537aedb12e9dc283a514a737f5e0b_51068_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu8e6537aedb12e9dc283a514a737f5e0b_51068_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu4354655918033083984.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-visitor-api-variables_hu8945051977648046138.png 1024w"
 loading="lazy"
 alt="Create VisitorAPI variables in Google Tag Manager"
 class="gallery-image"
@@ -126,7 +174,7 @@ data-flex-basis="750px"
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country.png"
 width="1740"
 height="559"
-srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_huf78e538b7db9669e5ed6c8eff2d25a67_54958_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_huf78e538b7db9669e5ed6c8eff2d25a67_54958_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_hu14060865026325935681.png 480w, https://chaoming.li/blog/how-to-trigger-marketing-tags-based-on-visitor-location-in-gtm/create-tag-for-us-country_hu16909247242117606558.png 1024w"
 loading="lazy"
 alt="Create a marketing tag for the US visitors in Google Tag Manager"
 class="gallery-image"
@@ -134,42 +182,42 @@ data-flex-grow="311"
 data-flex-basis="747px"
 >&lt;/p>
 &lt;p>Not only you can trigger tags based on the location variables, but you can also use the variables in your tags as parameters &lt;code>{{Country Code}}&lt;/code> to pass the data to your tags.&lt;/p>
-&lt;p>The location variables make it possible to personalize user experience based on visitor location by using GTM. Please feel free to leave a comment to share how you will use the location variables in GTM.&lt;/p></description></item><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder&lt;/h2>
-&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
+&lt;p>The location variables make it possible to personalize user experience based on visitor location by using GTM. Please feel free to leave a comment to share how you will use the location variables in GTM.&lt;/p></description></item><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder
+&lt;/h2>&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> website with Jekyll, I have been thinking to move the old blog site to a static solution because:&lt;/p>
 &lt;ul>
 &lt;li>No need for a database, which means less maintenance headache&lt;/li>
 &lt;li>Free hosting options like Github and Firebase&lt;/li>
 &lt;li>Fast, super fast! That is good for UX and SEO&lt;/li>
 &lt;/ul>
-&lt;h2 id="the-solution">The Solution&lt;/h2>
-&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+&lt;h2 id="the-solution">The Solution
+&lt;/h2>&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a> is gaining popularity and it has a lot of free themes too. I picked a theme called &lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
 >Stack&lt;/a>, which looks great in my opinion and is well maintained by its creator.&lt;/p>
 &lt;p>Creating a Hugo site is quite simple following its step-by-step instruction document. The themes are installed as &lt;code>git submodules&lt;/code> which makes them relatively simple to install.&lt;/p>
 &lt;p>Hugo also has a deployment config for Github pages so you can deploy your website by pushing commits to a branch.&lt;/p>
-&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown&lt;/h2>
-&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;!-- raw HTML omitted --> tag in HTML.&lt;/p>
+&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown
+&lt;/h2>&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;h2> tag in HTML.&lt;/p>
 &lt;p>If you don’t want to write with markdown syntax, &lt;a class="link" href="https://www.notion.so/" target="_blank" rel="noopener"
 >Notion&lt;/a> is a great tool. It has a very user-friendly interface for writing content. Once you finish an article, select the whole article and copy it, and you can paste content to a markdown file.&lt;/p>
-&lt;h2 id="my-thoughts">My Thoughts&lt;/h2>
-&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
+&lt;h2 id="my-thoughts">My Thoughts
+&lt;/h2>&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
 &lt;p>I think it’s totally possible to use the same solution for early-stage startups to build their websites and host them on Firebase. For SaaS startup, my thinking is that a static website for the content, and &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> for the web application. All these can be hosted on Firebase with minimum costs.&lt;/p>
 &lt;p>Although Notion is a great tool for writing and converting content to markdown format, I think there is a need for some kind of CMS application that can do a similar job and automate the process to update and deploy static websites. Or maybe just automate the deployment process of Notion articles to static websites, because Notion is already doing a really good job as a writing tool. So that people who don’t know much about Git can also easily update their static websites.&lt;/p></description></item><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
-&lt;h2 id="why-you-should-do-this">Why You Should Do This&lt;/h2>
-&lt;p>Good reasons to automate the deployment process are:&lt;/p>
+&lt;h2 id="why-you-should-do-this">Why You Should Do This
+&lt;/h2>&lt;p>Good reasons to automate the deployment process are:&lt;/p>
 &lt;ul>
 &lt;li>Reduce the impact of human error on a deployment&lt;/li>
 &lt;li>Improve security by not including any credentials or sensitive configuration settings in the source code&lt;/li>
 &lt;li>Restrict permission to deploy to certain environments (e.g. production) with a process&lt;/li>
 &lt;li>Streamline the deployment process and gain the benefits of automation (e.g. testing)&lt;/li>
 &lt;/ul>
-&lt;h2 id="assumptions">Assumptions&lt;/h2>
-&lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
+&lt;h2 id="assumptions">Assumptions
+&lt;/h2>&lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
 &lt;p>In this article, I’ll only assume that you have an App Engine application. I have used this process for Golang and PHP, but it will work for Python and other languages.&lt;/p>
-&lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions&lt;/h2>
-&lt;p>In your GitHub repository, you need to have some branches, at least a staging branch and a master branch. The workflow is that a developer can commit to the staging branch. It will automatically deploy the application to a staging App Engine environment.&lt;/p>
+&lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions
+&lt;/h2>&lt;p>In your GitHub repository, you need to have some branches, at least a staging branch and a master branch. The workflow is that a developer can commit to the staging branch. It will automatically deploy the application to a staging App Engine environment.&lt;/p>
 &lt;p>After the application is tested in the staging environment:&lt;/p>
 &lt;ul>
 &lt;li>The developer will create a pull request&lt;/li>
@@ -181,15 +229,15 @@ data-flex-basis="747px"
 &lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png"
 width="837"
 height="461"
-srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hu6393358048923545502.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hu3214756421551124863.png 1024w"
 loading="lazy"
 alt="Deployment Workflow Diagram"
 class="gallery-image"
 data-flex-grow="181"
 data-flex-basis="435px"
 >&lt;/p>
-&lt;h2 id="step-2-move-all-environment-related-configurations-to-appyaml">Step 2: Move All Environment Related Configurations to app.yaml&lt;/h2>
-&lt;p>It’s very common for an application to have environment variables for configuration and secrets such as database credentials, domains, GCP key files, etc. Some of these details are security-critical so they should never be included in the source code. If you have embedded them into part of the source code, it’s time to remove them and put them into the app.yaml file that is kept outside of the repository and only is used during deployment.&lt;/p>
+&lt;h2 id="step-2-move-all-environment-related-configurations-to-appyaml">Step 2: Move All Environment Related Configurations to app.yaml
+&lt;/h2>&lt;p>It’s very common for an application to have environment variables for configuration and secrets such as database credentials, domains, GCP key files, etc. Some of these details are security-critical so they should never be included in the source code. If you have embedded them into part of the source code, it’s time to remove them and put them into the app.yaml file that is kept outside of the repository and only is used during deployment.&lt;/p>
 &lt;p>In your app.yaml file, you can have these variables as environment variables in the following syntax:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -220,12 +268,12 @@ data-flex-basis="435px"
 &lt;/div>&lt;p>I don’t think $_ENV works.&lt;/p>
 &lt;p>If you need app.yaml for your local environment, just make sure the file is in .gitignore so it won’t be included in the repository.&lt;/p>
 &lt;p>Once you have put the environment variables into the staging app.yaml file, upload it to a Google Cloud Storage bucket and make sure it’s not available to the public (by default it isn’t). Do the same for the production app.yaml but use a different bucket.&lt;/p>
-&lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging&lt;/h2>
-&lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
+&lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging
+&lt;/h2>&lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q.png"
 width="501"
 height="597"
-srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hu8094247234291527269.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hu13098821626795376435.png 1024w"
 loading="lazy"
 alt="Cloud Build Screenshot"
 class="gallery-image"
@@ -255,17 +303,17 @@ data-flex-basis="201px"
 &lt;/div>
 &lt;/div>&lt;p>You can see that I use $_BUCKET in the cloudbuild.yaml file as the bucket name of the app.yaml file. This means when I configure the production Cloud Build trigger, the same cloudbuild.yaml will work without any modification.&lt;/p>
 &lt;p>Now, commit to your staging branch, and you will see Cloud Build is triggered and starts the deployment process automatically.&lt;/p>
-&lt;h2 id="step-4-grant-permissions-to-cloud-build">Step 4: Grant Permissions to Cloud Build&lt;/h2>
-&lt;p>The deployment is likely to fail because Cloud Build doesn’t have the permissions to access Cloud Storage, App Engine, etc.&lt;/p>
+&lt;h2 id="step-4-grant-permissions-to-cloud-build">Step 4: Grant Permissions to Cloud Build
+&lt;/h2>&lt;p>The deployment is likely to fail because Cloud Build doesn’t have the permissions to access Cloud Storage, App Engine, etc.&lt;/p>
 &lt;p>Go to IAM web UI in your GCP project, and change the permission settings of the Cloud Build service account to grant it App Engine Admin and other relevant permissions for completing the deployment. Now, retry the deployment in Cloud Build, you should see the successfully deployed message in the logs.&lt;/p>
-&lt;h2 id="step-5-repeat-step-3-and-step-4-for-production">Step 5: Repeat Step 3 and Step 4 for Production&lt;/h2>
-&lt;p>Just repeat the above two steps in the production project. Make sure the production app.yaml is in the Cloud Storage bucket for production, and the Cloud Build trigger _BUCKET variable is pointing to the production bucket as well.&lt;/p>
+&lt;h2 id="step-5-repeat-step-3-and-step-4-for-production">Step 5: Repeat Step 3 and Step 4 for Production
+&lt;/h2>&lt;p>Just repeat the above two steps in the production project. Make sure the production app.yaml is in the Cloud Storage bucket for production, and the Cloud Build trigger _BUCKET variable is pointing to the production bucket as well.&lt;/p>
 &lt;p>Because only the system administrator is able to commit to production, as a developer, you should create a Pull Request in the GitHub repository to merge your changes from the staging branch into the master branch. Once the Pull Request is approved and merged, it will trigger the Cloud Build deployment process in the production project.&lt;/p>
 &lt;p>Conclusion:&lt;/p>
 &lt;p>This approach not only streamlines the deployment process, but it also makes it more secure and reliable.&lt;/p>
 &lt;p>If you have any feedback or questions, please feel free to comment below.&lt;/p></description></item><item><title>How to Install Custom SSL Certificate on Google Cloud Platform</title><link>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</link><pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_NG0OmIlxq8M686LHMQHJvg.jpeg" alt="Featured image of post How to Install Custom SSL Certificate on Google Cloud Platform" />&lt;p>I recently installed custom SSL certificates in Google Cloud Platform (GCP) for both App Engine and load balancer (used by CDN and Computer Engine). Here is the step-by-step guide on how it’s done. I hope this will help you to go through the process.&lt;/p>
-&lt;h2 id="generating-a-certificate-signing-request">Generating a certificate signing request&lt;/h2>
-&lt;p>To get a certificate, firstly, you need to generate a certificate signing request to your SSL certificate issuer so that they can provide you with a valid certificate. Here is the command using OpenSSL to do it.&lt;/p>
+&lt;h2 id="generating-a-certificate-signing-request">Generating a certificate signing request
+&lt;/h2>&lt;p>To get a certificate, firstly, you need to generate a certificate signing request to your SSL certificate issuer so that they can provide you with a valid certificate. Here is the command using OpenSSL to do it.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -275,11 +323,11 @@ data-flex-basis="201px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Input the relevant information and put your domain name in Common Name, it will generate two files: server.key which is your private key, and server.csr which is the certificate signing request.&lt;/p>
-&lt;h2 id="get-your-ssl-certificate">Get your SSL certificate&lt;/h2>
-&lt;p>Provide your certificate issuer with your CSR file, they will generate your SSL certificate. Usually, this process only takes a few minutes. However, the process varies depending on which issuer you are going to use.&lt;/p>
+&lt;h2 id="get-your-ssl-certificate">Get your SSL certificate
+&lt;/h2>&lt;p>Provide your certificate issuer with your CSR file, they will generate your SSL certificate. Usually, this process only takes a few minutes. However, the process varies depending on which issuer you are going to use.&lt;/p>
 &lt;p>The format of the certificate can also be different depending on the issuer. I got the X.509 certificate in a crt file in this case.&lt;/p>
-&lt;h2 id="convert-your-private-key-to-pem-format">Convert your private key to PEM format&lt;/h2>
-&lt;p>If you only need to put your certificate in the GCP load balancer, you can skip this step as it doesn’t need a PEM format certificate. This is for App Engine. I don’t get why Google can’t just let me manage all my certificates in one place and in one format. This is actually a bit annoying.&lt;/p>
+&lt;h2 id="convert-your-private-key-to-pem-format">Convert your private key to PEM format
+&lt;/h2>&lt;p>If you only need to put your certificate in the GCP load balancer, you can skip this step as it doesn’t need a PEM format certificate. This is for App Engine. I don’t get why Google can’t just let me manage all my certificates in one place and in one format. This is actually a bit annoying.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -288,12 +336,12 @@ data-flex-basis="201px"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">openssl rsa -in server.key -out server.key.pem
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="upload-certificate-and-pem-key-to-app-engine">Upload certificate and PEM key to App Engine&lt;/h2>
-&lt;p>In the App Engine settings interface, click on the SSL certificates tab and you can upload a certificate.&lt;/p>
+&lt;/div>&lt;h2 id="upload-certificate-and-pem-key-to-app-engine">Upload certificate and PEM key to App Engine
+&lt;/h2>&lt;p>In the App Engine settings interface, click on the SSL certificates tab and you can upload a certificate.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog.png"
 width="526"
 height="97"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu3e8c4e129910e8ce8f3871d95e8a2b92_8964_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu14030190547983648642.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_tjA2bdDStYqfhoMi_ODPog_hu13266664655416037181.png 1024w"
 loading="lazy"
 alt="App Engine Settings Screenshot"
 class="gallery-image"
@@ -304,7 +352,7 @@ data-flex-basis="1301px"
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw.png"
 width="511"
 height="482"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_huc914cfc82dedd0fc4da7c8882eebbdee_23242_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_hu1124525354548165921.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rQaHJYhngjpX7luLv8FCYw_hu1101480671023693751.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to App Engine Screenshot"
 class="gallery-image"
@@ -314,12 +362,12 @@ data-flex-basis="254px"
 &lt;p>Give your certificate a name. I usually put the year it is issued in it so that when I need to renew it next year, I will have a good idea of which certificate is for which year.&lt;/p>
 &lt;p>Copy and paste your X.509 certificate file content and the PEM format private key content in the two boxes. Click “Upload” to save the certificate and key. It will ask you to enable SSL for the custom domains you have in App Engine. Just pick the relevant domains of the certificate.&lt;/p>
 &lt;p>This change will take about 10 minutes or more to become effective. You can verify that by checking your domain’s SSL certificate with any browser. It’s better to check it with all major browsers to make sure they like your certificate.&lt;/p>
-&lt;h2 id="upload-certificate-to-the-gcp-load-balancer">Upload certificate to the GCP load balancer&lt;/h2>
-&lt;p>To upload a certificate to the GCP load balancer, you need to go to Network services then edit your load balancer. Then click on Frontend configuration and you will be able to edit the port 443 configuration settings where you can manage your SSL certificates.&lt;/p>
+&lt;h2 id="upload-certificate-to-the-gcp-load-balancer">Upload certificate to the GCP load balancer
+&lt;/h2>&lt;p>To upload a certificate to the GCP load balancer, you need to go to Network services then edit your load balancer. Then click on Frontend configuration and you will be able to edit the port 443 configuration settings where you can manage your SSL certificates.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ.png"
 width="647"
 height="483"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu4a68c08bd52bcbea4d0ad444c4832dd7_36451_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu10513871708490492835.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_rmv2F1zrdyZy-r2xALDTgQ_hu5835333312688461400.png 1024w"
 loading="lazy"
 alt="Load Balancer Screenshot"
 class="gallery-image"
@@ -330,7 +378,7 @@ data-flex-basis="321px"
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw.png"
 width="479"
 height="610"
-srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu40a5bc936b313b92bfb88e2e2d947254_51282_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu13029761817825164855.png 480w, https://chaoming.li/blog/how-to-install-custom-ssl-certificate-on-google-cloud-platform/1_IJ5ctnCd-_EEuAOzga3hjw_hu5704344983803646941.png 1024w"
 loading="lazy"
 alt="Add SSL Certificate to Load Balancer Screenshot"
 class="gallery-image"
@@ -340,14 +388,14 @@ data-flex-basis="188px"
 &lt;p>Once the certificate is created in the system, you can assign it to the load balancer and GCP will ask if you want to delete your unassigned certificate. My suggestion is that only delete it after you can confirm the new certificate is working without any issue.&lt;/p>
 &lt;p>Similar to App Engine, the new certificate will only take effect after about 10 minutes or so. Verify it with all major browsers to make sure they like it.&lt;/p>
 &lt;p>In my experience missing the certificate chain can cause issues with some browsers but Chrome might not mind it.&lt;/p>
-&lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
+&lt;h2 id="conclusion">Conclusion
+&lt;/h2>&lt;p>Enabling SSL certificates in GCP load balancer and App Engine is fairly simple if you know about the process. Once you know how to navigate through the GCP UI to do it, it’s fairly straightforward.&lt;/p>
 &lt;p>Again, I think GCP should have a centralised place to manage all the certificates so you can just pick them up in the different products. That will save some effort.&lt;/p>
 &lt;p>Leave a comment if you have questions on install SSL certificate on GCP.&lt;/p></description></item><item><title>How to Use Docker for Go App Engine Development and Deploy to Standard Environment</title><link>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</link><pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/</guid><description>&lt;img src="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/43219741-fdfef302-8ffc-11e8-96f4-4a2ab2ce136b_orig-500x250.png" alt="Featured image of post How to Use Docker for Go App Engine Development and Deploy to Standard Environment" />&lt;p>App Engine is great but if you are using Docker, you can only use Flexible Environment which is not what I want as I would love to continue to use Standard Environment. Here is &lt;a class="link" href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank" rel="noopener"
 >a comparison of the two environments&lt;/a>.&lt;/p>
 &lt;p>My goal is to use Docker for development only. When the app is deployed, it will still be deployed to App Engine Standard Environment as usual. After some researches and trial, I found a way to do so.&lt;/p>
-&lt;h2 id="create-app-engine-development-docker">Create App Engine Development Docker&lt;/h2>
-&lt;p>After I asked on &lt;a class="link" href="https://stackoverflow.com/questions/53719388/is-it-possible-to-use-docker-as-dev-enviornment-for-golang-app-engine-standard-e/53722860" target="_blank" rel="noopener"
+&lt;h2 id="create-app-engine-development-docker">Create App Engine Development Docker
+&lt;/h2>&lt;p>After I asked on &lt;a class="link" href="https://stackoverflow.com/questions/53719388/is-it-possible-to-use-docker-as-dev-enviornment-for-golang-app-engine-standard-e/53722860" target="_blank" rel="noopener"
 >Stackoverflow&lt;/a>, and thanks to &lt;a class="link" href="https://stackoverflow.com/users/8456296/dhauptman" target="_blank" rel="noopener"
 >dhauptman&lt;/a> giving me the direction, I was able to create the Dockerfile that can spin up a docker container with Google Cloud SDK and run Go App Engine development environment. Here is the Dockerfile:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -442,14 +490,14 @@ data-flex-basis="188px"
 &lt;/div>
 &lt;/div>&lt;p>Now just need to use the following command to get the Go App Engine development environment up and running.&lt;/p>
 &lt;p>&lt;code>docker-compose up&lt;/code>&lt;/p>
-&lt;h2 id="deploy-to-app-engine-standard-environment">Deploy to App Engine Standard Environment&lt;/h2>
-&lt;p>I don’t want to deploy Docker containers to App Engine because that allows using Flexible Environment only. I will need to find a different way to deploy to Standard Environment. Google Cloud Build is perfect for the deployment task. It can deploy code from Github repository triggered by Git push.&lt;/p>
+&lt;h2 id="deploy-to-app-engine-standard-environment">Deploy to App Engine Standard Environment
+&lt;/h2>&lt;p>I don’t want to deploy Docker containers to App Engine because that allows using Flexible Environment only. I will need to find a different way to deploy to Standard Environment. Google Cloud Build is perfect for the deployment task. It can deploy code from Github repository triggered by Git push.&lt;/p>
 &lt;p>The solution is fairly straightforward. First, push the Go source code to Github. Git push will trigger Cloud Build to run cloudbuild.yaml and go through the steps to get the Go packages and to run the gcloud deploy command.&lt;/p>
 &lt;p>To do this, make sure your App Engine admin API is enabled and the App Engine is created in your project. You will also need to grant App Engine deployer and server admin permissions to the cloud build service account as below screenshot.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig.png"
 width="530"
 height="300"
-srcset="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_480x0_resize_box_3.png 480w, https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu5f6ca86c5b477c2b54ac3e7b34bee445_19137_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu2373867810089882956.png 480w, https://chaoming.li/blog/how-to-use-docker-for-go-app-engine-development-and-deploy-to-standard-environment/grant-permission_orig_hu11813051271615725101.png 1024w"
 loading="lazy"
 alt="Permissions for Cloud Build to Deploy to App Engine"
 class="gallery-image"
@@ -512,8 +560,8 @@ data-flex-basis="424px"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Now you just need to create the Cloud Build trigger to be triggered by Git push and run the cloudbuild.yaml to package the Go source code and deploy it to App Engine Standard Environment.&lt;/p>
-&lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;p>This approach is great when you need to replicate the development environment without much overhead. Including the Dockerfile in the Git repository will allow new developers to set up a development environment very fast as long as Git and Docker are installed.&lt;/p>
+&lt;h2 id="conclusion">Conclusion
+&lt;/h2>&lt;p>This approach is great when you need to replicate the development environment without much overhead. Including the Dockerfile in the Git repository will allow new developers to set up a development environment very fast as long as Git and Docker are installed.&lt;/p>
 &lt;p>Deployment is fully automatic when the code is pushed to the Github repository. I am not going to talk about how to manage and review code before deployment but you will need to have quality control on the code being pushed into the Github repository anyway.&lt;/p>
 &lt;p>Let me know what you think or if you have any questions.&lt;/p></description></item><item><title>Joining Partitioned Tables to Create Views in BigQuery</title><link>https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/</link><pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/</guid><description>&lt;img src="https://chaoming.li/blog/joining-partitioned-tables-to-create-views-in-bigquery/bigquery-500x250.png" alt="Featured image of post Joining Partitioned Tables to Create Views in BigQuery" />&lt;p>BigQuery date partitioned tables can limit the data scan by partitions to help keep the query cost low and improve query performance. However, Google’s documents do not give much clue about how to use partitioned tables to create views that support partition queries. I did some research and found the way to do it, even with views that are created from joining partitioned tables.&lt;/p>
 &lt;p>To expose the partitioning pseudo-column, create a query similar to this one:&lt;/p>
@@ -569,27 +617,27 @@ data-flex-basis="424px"
 &lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427.png"
 width="768"
 height="427"
-srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hub4d3af91cee52a79943037e924e82338_245585_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hub4d3af91cee52a79943037e924e82338_245585_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hu349301091010621543.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-19-46-41_orig-768x427_hu144848848582052592.png 1024w"
 loading="lazy"
 alt="Simple Web Analytics System Architecture"
 class="gallery-image"
 data-flex-grow="179"
 data-flex-basis="431px"
 >&lt;/p>
-&lt;h2 id="step-1-create-an-s3-bucket-to-store-log-files">Step 1: Create an S3 bucket to store log files&lt;/h2>
-&lt;p>First of all, you will need an S3 bucket to store all the log files. AWS S3 is a storage service, where you can store a lot of files in the cloud with pretty low costs. S3 buckets are like folders, you can store a group of files within.&lt;/p>
+&lt;h2 id="step-1-create-an-s3-bucket-to-store-log-files">Step 1: Create an S3 bucket to store log files
+&lt;/h2>&lt;p>First of all, you will need an S3 bucket to store all the log files. AWS S3 is a storage service, where you can store a lot of files in the cloud with pretty low costs. S3 buckets are like folders, you can store a group of files within.&lt;/p>
 &lt;p>Login to your AWS account, click on S3 in the product list menu under the Storage section and click on Create Bucket button. Give a name to the bucket, something like “my-web-analytics-logs”, and click Next all the way through. You have your S3 bucket created now.&lt;/p>
-&lt;h2 id="step-2-create-an-s3-bucket-to-store-the-tracking-pixel-image">Step 2: Create an S3 bucket to store the tracking pixel image&lt;/h2>
-&lt;p>Most web analytics solutions are using an invisible pixel image to track data. They attach the information to be tracked in the pixel URL as query parameters. So we need an S3 bucket to host this pixel file. Just repeat the process of step 1, but name the bucket “my-web-analytics-pixel”. Upload the pixel file to the bucket. You can grab the pixel file from &lt;a class="link" href="https://s3.amazonaws.com/cli-tracking-demo-pixel/pixel.gif" target="_blank" rel="noopener"
+&lt;h2 id="step-2-create-an-s3-bucket-to-store-the-tracking-pixel-image">Step 2: Create an S3 bucket to store the tracking pixel image
+&lt;/h2>&lt;p>Most web analytics solutions are using an invisible pixel image to track data. They attach the information to be tracked in the pixel URL as query parameters. So we need an S3 bucket to host this pixel file. Just repeat the process of step 1, but name the bucket “my-web-analytics-pixel”. Upload the pixel file to the bucket. You can grab the pixel file from &lt;a class="link" href="https://s3.amazonaws.com/cli-tracking-demo-pixel/pixel.gif" target="_blank" rel="noopener"
 >https://s3.amazonaws.com/cli-tracking-demo-pixel/pixel.gif&lt;/a>&lt;/p>
 &lt;p>You will need to make the pixel file public so it can be accessed from the Internet. To do so, go to the pixel bucket and tick the checkbox next to the file name, click More and select Make Public.&lt;/p>
-&lt;h2 id="step-3-create-a-cloudfront-distribution-and-enable-logging">Step 3: Create a CloudFront distribution and enable logging&lt;/h2>
-&lt;p>Now, we have our pixel file in the cloud, and we are ready to store the log files. CloudFront is the CDN AWS offers. It is fast and cheap to run. The reason we want to use CloudFront here is to be able to serve the pixel file very fast, so it doesn’t impact the page performance much, and log the data at the same time. Go to CloudFront, click on Create Distribution button, and click on Get Started under the Web section to go to the form to create a distribution.&lt;/p>
+&lt;h2 id="step-3-create-a-cloudfront-distribution-and-enable-logging">Step 3: Create a CloudFront distribution and enable logging
+&lt;/h2>&lt;p>Now, we have our pixel file in the cloud, and we are ready to store the log files. CloudFront is the CDN AWS offers. It is fast and cheap to run. The reason we want to use CloudFront here is to be able to serve the pixel file very fast, so it doesn’t impact the page performance much, and log the data at the same time. Go to CloudFront, click on Create Distribution button, and click on Get Started under the Web section to go to the form to create a distribution.&lt;/p>
 &lt;p>When you create the CloudFront distribution, you will need to enable logging and point to log files to the S3 bucket we created in step 1.&lt;/p>
 &lt;p>You will also need to point the origin to the S3 bucket containing the pixel file so your CloudFront distribution can serve the pixel file. You can leave all the other options as default.&lt;/p>
 &lt;p>After these 3 steps are completed, you are ready to take in whatever data and store it. We should start to work on the part to generate data.&lt;/p>
-&lt;h2 id="step-4-create-a-visitor-id-via-gtm">Step 4: Create a visitor ID via GTM&lt;/h2>
-&lt;p>To track the same visitors across a period, you need a cookie to store a unique random visitor ID. In Google Tag Manager (GTM), go to Variables, and create a custom Javascript variable and name it “Visitor ID”. Copy and paste the code below to the variable. This piece of code will check if the visitor already has a visitor ID cookie “v_id”. If yes, it will read it, refresh the cookie for another 2 years, and return the visitor ID value. Otherwise, it will create a random ID and save it to “v_id” cookie for 2 years, and return the newly created visitor ID value. We will use this value in the next step.&lt;/p>
+&lt;h2 id="step-4-create-a-visitor-id-via-gtm">Step 4: Create a visitor ID via GTM
+&lt;/h2>&lt;p>To track the same visitors across a period, you need a cookie to store a unique random visitor ID. In Google Tag Manager (GTM), go to Variables, and create a custom Javascript variable and name it “Visitor ID”. Copy and paste the code below to the variable. This piece of code will check if the visitor already has a visitor ID cookie “v_id”. If yes, it will read it, refresh the cookie for another 2 years, and return the visitor ID value. Otherwise, it will create a random ID and save it to “v_id” cookie for 2 years, and return the newly created visitor ID value. We will use this value in the next step.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -630,36 +678,36 @@ data-flex-basis="431px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="step-5-create-an-image-tag-in-gtm-and-attach-data-in-the-url-query-parameters">Step 5: Create an image tag in GTM and attach data in the URL query parameters&lt;/h2>
-&lt;p>We are going to use the pixel file in this step. Create an image tag in GTM. In the URL field, put in “https://your-cloud-front-distribution.cloudfront.net/pixel.gif?vid={{Visitor ID}}&amp;amp;pageUrl={{Page URL}}”, set the trigger as All Pages. &lt;code>{{Visitor ID}}&lt;/code> is the variable created in the previous step, and I attached the page URL in the query parameters in this example but you can attach whatever variables in your GTM as key-value pairs in the same way.&lt;/p>
+&lt;/div>&lt;h2 id="step-5-create-an-image-tag-in-gtm-and-attach-data-in-the-url-query-parameters">Step 5: Create an image tag in GTM and attach data in the URL query parameters
+&lt;/h2>&lt;p>We are going to use the pixel file in this step. Create an image tag in GTM. In the URL field, put in “https://your-cloud-front-distribution.cloudfront.net/pixel.gif?vid={{Visitor ID}}&amp;amp;pageUrl={{Page URL}}”, set the trigger as All Pages. &lt;code>{{Visitor ID}}&lt;/code> is the variable created in the previous step, and I attached the page URL in the query parameters in this example but you can attach whatever variables in your GTM as key-value pairs in the same way.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337.png"
 width="768"
 height="337"
-srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu75cd23ab8fc84cb5aa7db0dae4db8789_88175_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu75cd23ab8fc84cb5aa7db0dae4db8789_88175_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu12287685096774956757.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-29-52_orig-768x337_hu5664145166722555706.png 1024w"
 loading="lazy"
 alt="Google Tag Manager Custom Tag"
 class="gallery-image"
 data-flex-grow="227"
 data-flex-basis="546px"
 >&lt;/p>
-&lt;h2 id="step-6-publish-gtm">Step 6: Publish GTM&lt;/h2>
-&lt;p>By now, all the data collection and storage is set up. Once you publish GTM to your websites, data will start to flow in soon. The way it is set up in this demo doesn’t support real-time data streaming, so you will need to wait a few minutes to have your first log file deposited in the S3 bucket.&lt;/p>
-&lt;h2 id="step-7-create-an-athena-table-schema">Step 7: Create an Athena table schema&lt;/h2>
-&lt;p>After the data files are in your S3 bucket, you can start to query the data. AWS Athena is probably the fastest way to do so if you like to use SQL. I prefer to create a table manually in Athena than using the crawler feature because I found the crawler is not always working properly in my experience.&lt;/p>
+&lt;h2 id="step-6-publish-gtm">Step 6: Publish GTM
+&lt;/h2>&lt;p>By now, all the data collection and storage is set up. Once you publish GTM to your websites, data will start to flow in soon. The way it is set up in this demo doesn’t support real-time data streaming, so you will need to wait a few minutes to have your first log file deposited in the S3 bucket.&lt;/p>
+&lt;h2 id="step-7-create-an-athena-table-schema">Step 7: Create an Athena table schema
+&lt;/h2>&lt;p>After the data files are in your S3 bucket, you can start to query the data. AWS Athena is probably the fastest way to do so if you like to use SQL. I prefer to create a table manually in Athena than using the crawler feature because I found the crawler is not always working properly in my experience.&lt;/p>
 &lt;p>To manually create a table in Athena, you will need to point the table to your log file s3 bucket and define all the fields in the table. You can find &lt;a class="link" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html" target="_blank" rel="noopener"
 >the CloudFront log file format here&lt;/a>. There are 25 fields, so take your time to go through them one by one. In my demo, I only created the first 12 fields because that’s good enough for the demo, and the 12th field is the one stores the query parameter data. Here is a screenshot of the fields in my table.&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381.png"
 width="768"
 height="381"
-srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu62c2c7d44b1a4583eaabf69077b16cd4_114345_480x0_resize_box_3.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu62c2c7d44b1a4583eaabf69077b16cd4_114345_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu6333404493067645887.png 480w, https://chaoming.li/blog/build-your-own-web-analytics-platform-in-25-minutes/screenshot-2018-02-24-20-39-40_orig-768x381_hu12935732581301895481.png 1024w"
 loading="lazy"
 alt="AWS Athena Data Schema"
 class="gallery-image"
 data-flex-grow="201"
 data-flex-basis="483px"
 >&lt;/p>
-&lt;h2 id="step-8-check-your-data">&lt;strong>S&lt;/strong>tep 8: Check your data&lt;/h2>
-&lt;p>You can use “select * from database_name.table_name” to inspect all the data you have in the log files. Spend some time learning your data, you have the IP address, the user agent string, and the data you send through from the pixel.&lt;/p>
+&lt;h2 id="step-8-check-your-data">&lt;strong>S&lt;/strong>tep 8: Check your data
+&lt;/h2>&lt;p>You can use “select * from database_name.table_name” to inspect all the data you have in the log files. Spend some time learning your data, you have the IP address, the user agent string, and the data you send through from the pixel.&lt;/p>
 &lt;p>Here is the SQL to count visitors by page URLs and sort the results in descending order. The example uses the &lt;code>url_extract_parameter&lt;/code> function to get the value out of the query parameters by name. This function only works for full URLs, so I have to concatenate some fields to recreate the full URLs to allow the function to work properly,&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -701,8 +749,8 @@ data-flex-basis="483px"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">ORDER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Visitors&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DESC&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;p>By now, you have a very simple web analytics platform that can take in whatever data you want to track as long as you have it in your GTM variables. This is just a super-simplified demo of how web analytics platforms work in principle. There are a lot of missing parts such as cross-domain tracking, data enrichment, data visualisation, etc. However, it is also very flexible because it is not limited by any platform. You have the freedom to design what to track.&lt;/p>
+&lt;/div>&lt;h2 id="conclusion">Conclusion
+&lt;/h2>&lt;p>By now, you have a very simple web analytics platform that can take in whatever data you want to track as long as you have it in your GTM variables. This is just a super-simplified demo of how web analytics platforms work in principle. There are a lot of missing parts such as cross-domain tracking, data enrichment, data visualisation, etc. However, it is also very flexible because it is not limited by any platform. You have the freedom to design what to track.&lt;/p>
 &lt;p>I hope this article helps you understand how web analytics platform collects data at a high level, and feel free to extend it to other usages like tracking non-web data.&lt;/p></description></item><item><title>Python Voice Assistant Source Code</title><link>https://chaoming.li/blog/python-voice-assistant-source-code/</link><pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/python-voice-assistant-source-code/</guid><description>&lt;img src="https://chaoming.li/blog/python-voice-assistant-source-code/pytho-voice-assistant.png" alt="Featured image of post Python Voice Assistant Source Code" />&lt;p>Back in mid-2015, I created my first and only Python script so far. The script was a voice assistant. I thought I lost the source code, but it’s been in my Dropbox all the time and was named with a weird project name so I didn’t realise that’s it. I just didn’t try to look for it hard enough.&lt;/p>
 &lt;p>Here are a couple of videos I took back in 2015 when it was built. The script was running on a Raspberry Pi 3 with a USB sound card connecting to a microphone and a speaker.&lt;/p>
 &lt;div class="video-wrapper">
@@ -851,7 +899,7 @@ title="YouTube Video"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">speechtext&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">r&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recognize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">audio&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;You said: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">speechtext&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pattern&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">re&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">compile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;(.*)(tell|say)(.*) about (.*)&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pattern&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">speechtext&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pattern&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="k">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">speechtext&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">None&lt;/span>&lt;span class="p">):&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">answer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">wiki&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">group&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">))&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">answer&lt;/span>&lt;span class="p">)&lt;/span>
@@ -871,12 +919,35 @@ title="YouTube Video"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">listen&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>If you want to build a voice assistant, I suggest trying DialogFlow as the response engine. It can make responses more natural, and it can have a conversation to gather all the required information for a task (e.g. book a flight ticket).&lt;/p></description></item><item><title>About Me</title><link>https://chaoming.li/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/about-me/</guid><description>&lt;p>Hi,&lt;/p>
-&lt;p>Welcome to my website. I am Chaoming Li. I am passionate about technologies and entrepreneurship.&lt;/p>
-&lt;p>I am the CEO and co-founder of &lt;a class="link" href="https://www.insightech.com" target="_blank" rel="noopener"
->Insightech&lt;/a>, a digital analytics solution startup that focuses on helping businesses to understand their digital experiences and to lift their conversion rates in the digital channel.&lt;/p>
-&lt;p>I develop software mainly using Go for the backend and React for the frontend. I like to learn about new ideas and technologies and apply them to solve problems in the real world. You can find a big portion of my posts about tech here.&lt;/p>
-&lt;p>If you like what I write about and what I am doing, feel free to follow me on &lt;a class="link" href="https://www.linkedin.com/in/chaomingli/" target="_blank" rel="noopener"
->Linkedin&lt;/a>, &lt;a class="link" href="https://twitter.com/ChaomingLi" target="_blank" rel="noopener"
->Twitter&lt;/a> and &lt;a class="link" href="https://github.com/chaoming" target="_blank" rel="noopener"
->Github&lt;/a>.&lt;/p></description></item><item><title>Archives</title><link>https://chaoming.li/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/archives/</guid><description/></item><item><title>Projects</title><link>https://chaoming.li/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/projects/</guid><description>&lt;p>I am passionate about technologies and building things that help people in their work and life. Here are the projects I created and am involved.&lt;/p></description></item><item><title>Search</title><link>https://chaoming.li/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/search/</guid><description/></item></channel></rss>
+&lt;/div>&lt;p>If you want to build a voice assistant, I suggest trying DialogFlow as the response engine. It can make responses more natural, and it can have a conversation to gather all the required information for a task (e.g. book a flight ticket).&lt;/p></description></item><item><title>About Me</title><link>https://chaoming.li/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/about-me/</guid><description>&lt;p>Hello! 👋&lt;/p>
+&lt;p>I&amp;rsquo;m Chaoming Li, a tech entrepreneur and software engineer with a passion for building innovative digital solutions that make a real impact.&lt;/p>
+&lt;p>As the CEO and co-founder of &lt;a class="link" href="https://www.insightech.com" target="_blank" rel="noopener"
+>Insightech&lt;/a>, I lead a team dedicated to revolutionizing digital analytics. Our platform helps businesses deeply understand their digital experiences and optimize conversion rates through advanced analytics and insights.&lt;/p>
+&lt;h2 id="technical-expertise">Technical Expertise
+&lt;/h2>&lt;p>My technical foundation is built on:&lt;/p>
+&lt;ul>
+&lt;li>Backend development with Go&lt;/li>
+&lt;li>Frontend development with React&lt;/li>
+&lt;li>Cloud infrastructure and scalable systems&lt;/li>
+&lt;li>Digital analytics and optimization&lt;/li>
+&lt;/ul>
+&lt;p>I believe in the power of technology to solve real-world problems and am constantly exploring new technologies and methodologies to push the boundaries of what&amp;rsquo;s possible.&lt;/p>
+&lt;h2 id="writing--sharing">Writing &amp;amp; Sharing
+&lt;/h2>&lt;p>On this blog, I share my experiences and insights about:&lt;/p>
+&lt;ul>
+&lt;li>Software development best practices&lt;/li>
+&lt;li>Technology trends and innovations&lt;/li>
+&lt;li>Entrepreneurship journey&lt;/li>
+&lt;li>Digital analytics and optimization strategies&lt;/li>
+&lt;/ul>
+&lt;h2 id="connect-with-me">Connect With Me
+&lt;/h2>&lt;p>I&amp;rsquo;m always excited to connect with fellow tech enthusiasts, entrepreneurs, and innovators. You can find me on:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/chaomingli/" target="_blank" rel="noopener"
+>LinkedIn&lt;/a> - For professional networking and industry insights&lt;/li>
+&lt;li>&lt;a class="link" href="https://twitter.com/ChaomingLi" target="_blank" rel="noopener"
+>Twitter&lt;/a> - For tech discussions and updates&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/chaoming" target="_blank" rel="noopener"
+>GitHub&lt;/a> - For code collaborations and open-source contributions&lt;/li>
+&lt;/ul>
+&lt;p>Feel free to reach out if you&amp;rsquo;re interested in digital analytics, tech entrepreneurship, or just want to chat about the latest in technology!&lt;/p></description></item><item><title>Archives</title><link>https://chaoming.li/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/archives/</guid><description/></item><item><title>Projects</title><link>https://chaoming.li/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/projects/</guid><description>&lt;p>I am passionate about technologies and building things that help people in their work and life. Here are the projects I created and am involved.&lt;/p></description></item><item><title>Search</title><link>https://chaoming.li/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chaoming.li/search/</guid><description/></item></channel></rss>

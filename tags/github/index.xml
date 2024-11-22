@@ -1,39 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>github on Chaoming's Blog</title><link>https://chaoming.li/tags/github/</link><description>Recent content in github on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder&lt;/h2>
-&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on Chaoming's Blog</title><link>https://chaoming.li/tags/github/</link><description>Recent content in Github on Chaoming's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chaoming.li/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Build a Static Blog with Hugo</title><link>https://chaoming.li/blog/build-a-static-blog-with-hugo/</link><pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/build-a-static-blog-with-hugo/</guid><description>&lt;img src="https://chaoming.li/blog/build-a-static-blog-with-hugo/hugo.png" alt="Featured image of post Build a Static Blog with Hugo" />&lt;h2 id="why-static-website-builder">Why Static Website Builder
+&lt;/h2>&lt;p>I had a blog that was using WordPress and it was hosted on an AWS EC2 + CloudFront CDN. It was fast and not too hard to use, except that sometimes it might break down because of a WordPress update or issues with the MySQL database. Since I built the &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> website with Jekyll, I have been thinking to move the old blog site to a static solution because:&lt;/p>
 &lt;ul>
 &lt;li>No need for a database, which means less maintenance headache&lt;/li>
 &lt;li>Free hosting options like Github and Firebase&lt;/li>
 &lt;li>Fast, super fast! That is good for UX and SEO&lt;/li>
 &lt;/ul>
-&lt;h2 id="the-solution">The Solution&lt;/h2>
-&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
+&lt;h2 id="the-solution">The Solution
+&lt;/h2>&lt;p>I did some research and decided not to use Jekyll because I found &lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a> is gaining popularity and it has a lot of free themes too. I picked a theme called &lt;a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/" target="_blank" rel="noopener"
 >Stack&lt;/a>, which looks great in my opinion and is well maintained by its creator.&lt;/p>
 &lt;p>Creating a Hugo site is quite simple following its step-by-step instruction document. The themes are installed as &lt;code>git submodules&lt;/code> which makes them relatively simple to install.&lt;/p>
 &lt;p>Hugo also has a deployment config for Github pages so you can deploy your website by pushing commits to a branch.&lt;/p>
-&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown&lt;/h2>
-&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;!-- raw HTML omitted --> tag in HTML.&lt;/p>
+&lt;h2 id="writing-posts-with-markdown">Writing Posts with Markdown
+&lt;/h2>&lt;p>The most common way to write content for static websites is to create markdown files. Markdown is widely used in writing documentation for tech projects. You don’t need to worry about HTML tags, just write with some formatting syntax like “##” means &lt;h2> tag in HTML.&lt;/p>
 &lt;p>If you don’t want to write with markdown syntax, &lt;a class="link" href="https://www.notion.so/" target="_blank" rel="noopener"
 >Notion&lt;/a> is a great tool. It has a very user-friendly interface for writing content. Once you finish an article, select the whole article and copy it, and you can paste content to a markdown file.&lt;/p>
-&lt;h2 id="my-thoughts">My Thoughts&lt;/h2>
-&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
+&lt;h2 id="my-thoughts">My Thoughts
+&lt;/h2>&lt;p>There are many open-source projects are using static website builders for building websites for the projects and are hosting the websites on Github.&lt;/p>
 &lt;p>I think it’s totally possible to use the same solution for early-stage startups to build their websites and host them on Firebase. For SaaS startup, my thinking is that a static website for the content, and &lt;a class="link" href="http://fireact.dev" target="_blank" rel="noopener"
 >fireact.dev&lt;/a> for the web application. All these can be hosted on Firebase with minimum costs.&lt;/p>
 &lt;p>Although Notion is a great tool for writing and converting content to markdown format, I think there is a need for some kind of CMS application that can do a similar job and automate the process to update and deploy static websites. Or maybe just automate the deployment process of Notion articles to static websites, because Notion is already doing a really good job as a writing tool. So that people who don’t know much about Git can also easily update their static websites.&lt;/p></description></item><item><title>Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub</title><link>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</link><pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate><guid>https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/</guid><description>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png" alt="Featured image of post Automate Deployments to Multiple App Engine Environments with Cloud Build and GitHub" />&lt;p>If you want to securely automate deployments of your App Engine application to multiple environments such as staging and production with a simple Git commit or a pull request, this article will outline the steps for you.&lt;/p>
-&lt;h2 id="why-you-should-do-this">Why You Should Do This&lt;/h2>
-&lt;p>Good reasons to automate the deployment process are:&lt;/p>
+&lt;h2 id="why-you-should-do-this">Why You Should Do This
+&lt;/h2>&lt;p>Good reasons to automate the deployment process are:&lt;/p>
 &lt;ul>
 &lt;li>Reduce the impact of human error on a deployment&lt;/li>
 &lt;li>Improve security by not including any credentials or sensitive configuration settings in the source code&lt;/li>
 &lt;li>Restrict permission to deploy to certain environments (e.g. production) with a process&lt;/li>
 &lt;li>Streamline the deployment process and gain the benefits of automation (e.g. testing)&lt;/li>
 &lt;/ul>
-&lt;h2 id="assumptions">Assumptions&lt;/h2>
-&lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
+&lt;h2 id="assumptions">Assumptions
+&lt;/h2>&lt;p>I am not going to discuss how to set up Git repositories and GitHub accounts. There are plenty of tutorials online for those topics.&lt;/p>
 &lt;p>In this article, I’ll only assume that you have an App Engine application. I have used this process for Golang and PHP, but it will work for Python and other languages.&lt;/p>
-&lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions&lt;/h2>
-&lt;p>In your GitHub repository, you need to have some branches, at least a staging branch and a master branch. The workflow is that a developer can commit to the staging branch. It will automatically deploy the application to a staging App Engine environment.&lt;/p>
+&lt;h2 id="step-1-enable-branch-restrictions">Step 1: Enable Branch Restrictions
+&lt;/h2>&lt;p>In your GitHub repository, you need to have some branches, at least a staging branch and a master branch. The workflow is that a developer can commit to the staging branch. It will automatically deploy the application to a staging App Engine environment.&lt;/p>
 &lt;p>After the application is tested in the staging environment:&lt;/p>
 &lt;ul>
 &lt;li>The developer will create a pull request&lt;/li>
@@ -45,15 +45,15 @@
 &lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ.png"
 width="837"
 height="461"
-srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hub44496e5fe12534548beed0d5e7745a9_48424_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hu6393358048923545502.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_UzYiagjfQwOZTlIwmCqKOQ_hu3214756421551124863.png 1024w"
 loading="lazy"
 alt="Deployment Workflow Diagram"
 class="gallery-image"
 data-flex-grow="181"
 data-flex-basis="435px"
 >&lt;/p>
-&lt;h2 id="step-2-move-all-environment-related-configurations-to-appyaml">Step 2: Move All Environment Related Configurations to app.yaml&lt;/h2>
-&lt;p>It’s very common for an application to have environment variables for configuration and secrets such as database credentials, domains, GCP key files, etc. Some of these details are security-critical so they should never be included in the source code. If you have embedded them into part of the source code, it’s time to remove them and put them into the app.yaml file that is kept outside of the repository and only is used during deployment.&lt;/p>
+&lt;h2 id="step-2-move-all-environment-related-configurations-to-appyaml">Step 2: Move All Environment Related Configurations to app.yaml
+&lt;/h2>&lt;p>It’s very common for an application to have environment variables for configuration and secrets such as database credentials, domains, GCP key files, etc. Some of these details are security-critical so they should never be included in the source code. If you have embedded them into part of the source code, it’s time to remove them and put them into the app.yaml file that is kept outside of the repository and only is used during deployment.&lt;/p>
 &lt;p>In your app.yaml file, you can have these variables as environment variables in the following syntax:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -84,12 +84,12 @@ data-flex-basis="435px"
 &lt;/div>&lt;p>I don’t think $_ENV works.&lt;/p>
 &lt;p>If you need app.yaml for your local environment, just make sure the file is in .gitignore so it won’t be included in the repository.&lt;/p>
 &lt;p>Once you have put the environment variables into the staging app.yaml file, upload it to a Google Cloud Storage bucket and make sure it’s not available to the public (by default it isn’t). Do the same for the production app.yaml but use a different bucket.&lt;/p>
-&lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging&lt;/h2>
-&lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
+&lt;h2 id="step-3-create-your-cloud-build-for-staging">Step 3: Create Your Cloud Build for Staging
+&lt;/h2>&lt;p>In GCP, Cloud Build can trigger a deployment from Git commits to a certain branch. The web UI is very simple to follow to create the trigger. The trick is to have a variable called _BUCKET which is the bucket name that contains your app.yaml&lt;/p>
 &lt;p>&lt;img src="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q.png"
 width="501"
 height="597"
-srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_480x0_resize_box_3.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hua4b15b1a37c795d4e3b80fd73647b251_45868_1024x0_resize_box_3.png 1024w"
+srcset="https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hu8094247234291527269.png 480w, https://chaoming.li/blog/automate-deployments-to-multiple-app-engine-environments-with-cloud-build-and-github/1_GBG2F-EdARSeVptNoYNo2Q_hu13098821626795376435.png 1024w"
 loading="lazy"
 alt="Cloud Build Screenshot"
 class="gallery-image"
@@ -119,11 +119,11 @@ data-flex-basis="201px"
 &lt;/div>
 &lt;/div>&lt;p>You can see that I use $_BUCKET in the cloudbuild.yaml file as the bucket name of the app.yaml file. This means when I configure the production Cloud Build trigger, the same cloudbuild.yaml will work without any modification.&lt;/p>
 &lt;p>Now, commit to your staging branch, and you will see Cloud Build is triggered and starts the deployment process automatically.&lt;/p>
-&lt;h2 id="step-4-grant-permissions-to-cloud-build">Step 4: Grant Permissions to Cloud Build&lt;/h2>
-&lt;p>The deployment is likely to fail because Cloud Build doesn’t have the permissions to access Cloud Storage, App Engine, etc.&lt;/p>
+&lt;h2 id="step-4-grant-permissions-to-cloud-build">Step 4: Grant Permissions to Cloud Build
+&lt;/h2>&lt;p>The deployment is likely to fail because Cloud Build doesn’t have the permissions to access Cloud Storage, App Engine, etc.&lt;/p>
 &lt;p>Go to IAM web UI in your GCP project, and change the permission settings of the Cloud Build service account to grant it App Engine Admin and other relevant permissions for completing the deployment. Now, retry the deployment in Cloud Build, you should see the successfully deployed message in the logs.&lt;/p>
-&lt;h2 id="step-5-repeat-step-3-and-step-4-for-production">Step 5: Repeat Step 3 and Step 4 for Production&lt;/h2>
-&lt;p>Just repeat the above two steps in the production project. Make sure the production app.yaml is in the Cloud Storage bucket for production, and the Cloud Build trigger _BUCKET variable is pointing to the production bucket as well.&lt;/p>
+&lt;h2 id="step-5-repeat-step-3-and-step-4-for-production">Step 5: Repeat Step 3 and Step 4 for Production
+&lt;/h2>&lt;p>Just repeat the above two steps in the production project. Make sure the production app.yaml is in the Cloud Storage bucket for production, and the Cloud Build trigger _BUCKET variable is pointing to the production bucket as well.&lt;/p>
 &lt;p>Because only the system administrator is able to commit to production, as a developer, you should create a Pull Request in the GitHub repository to merge your changes from the staging branch into the master branch. Once the Pull Request is approved and merged, it will trigger the Cloud Build deployment process in the production project.&lt;/p>
 &lt;p>Conclusion:&lt;/p>
 &lt;p>This approach not only streamlines the deployment process, but it also makes it more secure and reliable.&lt;/p>
