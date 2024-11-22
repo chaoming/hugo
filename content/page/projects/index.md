@@ -8,7 +8,7 @@ links:
   - title: Fireact
     description: Reactjs + Firebase + Stripe = Open source subscription based SaaS web applications.
     website: https://www.fireact.dev
-    image: fireact-logo.png
+    image: fireact-logo.svg
   - title: VisitorAPI
     description: Fast and reliable API to detect visitor location and device info.
     website: https://www.visitorapi.com

@@ -10,12 +10,35 @@ menu:
 comments: false
 ---
 
-Hi,
+Hello! 👋
 
-Welcome to my website. I am Chaoming Li. I am passionate about technologies and entrepreneurship.
+I'm Chaoming Li, a tech entrepreneur and software engineer with a passion for building innovative digital solutions that make a real impact.
 
-I am the CEO and co-founder of [Insightech](https://www.insightech.com), a digital analytics solution startup that focuses on helping businesses to understand their digital experiences and to lift their conversion rates in the digital channel.
+As the CEO and co-founder of [Insightech](https://www.insightech.com), I lead a team dedicated to revolutionizing digital analytics. Our platform helps businesses deeply understand their digital experiences and optimize conversion rates through advanced analytics and insights.
 
-I develop software mainly using Go for the backend and React for the frontend. I like to learn about new ideas and technologies and apply them to solve problems in the real world. You can find a big portion of my posts about tech here.
+## Technical Expertise
 
-If you like what I write about and what I am doing, feel free to follow me on [Linkedin](https://www.linkedin.com/in/chaomingli/), [Twitter](https://twitter.com/ChaomingLi) and [Github](https://github.com/chaoming).
+My technical foundation is built on:
+- Backend development with Go
+- Frontend development with React
+- Cloud infrastructure and scalable systems
+- Digital analytics and optimization
+
+I believe in the power of technology to solve real-world problems and am constantly exploring new technologies and methodologies to push the boundaries of what's possible.
+
+## Writing & Sharing
+
+On this blog, I share my experiences and insights about:
+- Software development best practices
+- Technology trends and innovations
+- Entrepreneurship journey
+- Digital analytics and optimization strategies
+
+## Connect With Me
+
+I'm always excited to connect with fellow tech enthusiasts, entrepreneurs, and innovators. You can find me on:
+- [LinkedIn](https://www.linkedin.com/in/chaomingli/) - For professional networking and industry insights
+- [Twitter](https://twitter.com/ChaomingLi) - For tech discussions and updates
+- [GitHub](https://github.com/chaoming) - For code collaborations and open-source contributions
+
+Feel free to reach out if you're interested in digital analytics, tech entrepreneurship, or just want to chat about the latest in technology!
