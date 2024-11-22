@@ -82,7 +82,6 @@ params:
             clientSecret:
             autoCreateIssue: false
 
-        # Waline client configuration see: https://waline.js.org/en/reference/component.html
         waline:
             serverURL:
             lang:
@@ -103,11 +102,10 @@ params:
             path:
             lang:
 
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
         cactus:
             defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
             serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+            siteName: ""
 
         giscus:
             repo:
@@ -147,10 +145,7 @@ params:
 
     opengraph:
         twitter:
-            # Your Twitter username
             site: ChaomingLi
-
-            # Available values: summary, summary_large_image
             card: summary_large_image
 
     defaultImage:
@@ -160,10 +155,7 @@ params:
             src:
 
     colorScheme:
-        # Display toggle
         toggle: true
-
-        # Available values: auto, light, dark
         default: auto
 
     imageProcessing:
@@ -172,15 +164,12 @@ params:
         content:
             enabled: true
 
-### Custom menu
-### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
-### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main: []
 
     social:
         - identifier: linkedin
-          name: Linkedin
+          name: LinkedIn
           url: https://www.linkedin.com/in/chaomingli/
           params:
               icon: brand-linkedin
@@ -202,15 +191,13 @@ related:
     indices:
         - name: tags
           weight: 100
-
         - name: categories
           weight: 200
 
 markup:
     goldmark:
         renderer:
-            ## Set to true if you have HTML content inside Markdown
-            unsafe: false
+            unsafe: true  # Enable unsafe HTML rendering
     tableOfContents:
         endLevel: 4
         ordered: true
