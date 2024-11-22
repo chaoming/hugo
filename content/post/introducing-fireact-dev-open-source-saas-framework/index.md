@@ -1,7 +1,7 @@
 ---
 author: "Chaoming Li"
 title: "Introducing fireact.dev: An Open Source SaaS Framework Built with AI"
-date: 2024-01-14
+date: 2024-11-22
 description: "Discover fireact.dev, an innovative open-source SaaS framework that combines Firebase and React to accelerate your SaaS development journey."
 categories: [
     "Software Development"
